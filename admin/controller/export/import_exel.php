@@ -4,8 +4,8 @@ $filename="import/".$_FILES['importfile']['name'];
 //print_r($_FILES['import']);
 //echo $filename;
 copy($_FILES['importfile']['tmp_name'],$filename);
-require_once('medoo.min.php');
-require_once('config.php');
+require_once('/medoo.min.php');
+require_once('/config.php');
 require_once('Classes/PHPExcel.php');
 // Подключаем класс для вывода данных в формате excel
 require_once('Classes/PHPExcel/Writer/Excel5.php');

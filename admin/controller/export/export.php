@@ -1,6 +1,6 @@
 <?php namespace export;
-require  'medoo.min.php';
-require 'config.php';
+require_once('medoo.min.php');
+require_once('config.php');
 use medoo;
 use PDO;
 

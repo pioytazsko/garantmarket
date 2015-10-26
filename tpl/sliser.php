@@ -1,14 +1,16 @@
 <?php // Include Medoo
-require_once 'medoo.min.php';
- // Initialize
+require_once('/medoo.min.php');
+require('/config.php');
+
 $database = new medoo(array(
-	'database_type' => 'mysql',
-	'database_name' => 'garantma_db',
-	'server' => 'localhost',
-	'username' => 'garantma_user',
-	'password' => 'crKAyqBMMaEq',
-	'charset' => 'utf8'
-    ));
+	       // required
+            'database_type' => $config_db['database_type'],
+            'database_name'=> $config_db['database_name'],
+            'server_name' => $config_db['server_name'],
+            'username' => $config_db['username'],
+            'password' => $config_db['password'],
+            'charset'=>$config_db['charset']
+        ));
 // сделаем  выборку слайдов из базы данных для нашего товара из бд для категории, и для товара
 $datas = $database->select("catalog", array(
 	"category"

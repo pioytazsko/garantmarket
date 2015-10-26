@@ -2,13 +2,28 @@
 $user='root';
 $pasword='';
 $database='garantmarket';
- $config=array(
+ $config_db=array(
       'database_type' => 'mysql',
     'database_name'=> 'garantmarket',
 	'server_name' => 'localhost',
 	'username' => 'root',
 	'password' => '',
     'charset'=>'utf8');
+
+// $config_db=array(
+//      'database_type' => 'mysql',
+//    'database_name'=> 'garantma_db',
+//	'server_name' => 'localhost',
+//	'username' => 'garantma_user',
+//	'password' => 'crKAyqBMMaEq',
+//    'charset'=>'utf8');
+
+
+
+//example
+//require('/medoo.min.php');
+//require('/config.php');
+
 //$database = new medoo(array(
 //	       // required
 //            'database_type' => $config['database_type'],

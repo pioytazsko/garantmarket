@@ -1,22 +1,17 @@
-<?php require_once 'medoo.min.php';
+<?php 
+require_once('/medoo.min.php');
 require('/config.php');
- // Initialize
-//$database = new medoo(array(
-//	'database_type' => 'mysql',
-//	'database_name' => 'garantmarket',
-//	'server' => 'localhost',
-//	'username' => 'root',
-//	'password' => '',
-//	'charset' => 'utf8'
-//    ));
+
 $database = new medoo(array(
-	'database_type' => 'mysql',
-	'database_name' => 'garantma_db',
-	'server' => 'localhost',
-	'username' => 'garantma_user',
-	'password' => 'crKAyqBMMaEq',
-	'charset' => 'utf8'
-    ));
+	       // required
+            'database_type' => $config_db['database_type'],
+            'database_name'=> $config_db['database_name'],
+            'server_name' => $config_db['server_name'],
+            'username' => $config_db['username'],
+            'password' => $config_db['password'],
+            'charset'=>$config_db['charset']
+        ));
+
 $result=$database->select("catecory",'*',array(
 	"chpu[~]" => $id_cat2
 ));
