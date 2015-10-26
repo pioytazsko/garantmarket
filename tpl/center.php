@@ -90,7 +90,7 @@ $infocatrez=mysql_fetch_array($infocat);
 					if($paramsitemrez2>0)
 					{
 				
-				if ($paramsitemrez[val]!=''){ $i++;echo '<div class="opis_punct">'.$paramsitemrez2['name'].':<span style="margin-left:7px" >'. $paramsitemrez['val'].'</span></div>';}?>
+				if ($paramsitemrez['val']!=''){ $i++;echo '<div class="opis_punct">'.$paramsitemrez2['name'].':<span style="margin-left:7px" >'. $paramsitemrez['val'].'</span></div>';}?>
 				<?php
 				}
 				}

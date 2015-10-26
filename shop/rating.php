@@ -1,6 +1,6 @@
  <?php 
 require_once('/medoo.min.php');
-require('/config.php');
+require_once('/config.php');
 
 $database = new medoo(array(
 	       // required

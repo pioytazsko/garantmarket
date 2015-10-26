@@ -235,7 +235,7 @@ echo "</ul>";
 				$paramsitemrez2=mysql_fetch_array($paramsitem2);
 				if($paramsitemrez2>0)
 				{
-				if($paramsitemrez[val]){
+				if($paramsitemrez['val']){
 				?>
 				<div class="shop_button5"><div class="shop_buttonim"><img src="icon/<?php echo "$paramsitemrez2[image]"; ?>" /></div><div class="shop_buttonval"><strong><?php echo "$paramsitemrez2[name]"; ?></strong> : <span style="  color: #2DACDD;
   padding-left: 5px;

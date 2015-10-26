@@ -1,6 +1,6 @@
 <?php 
-$title="$sitrez[title]";
-$keywords="$sitrez[keywords]";
+$title=$sitrez['title'];
+$keywords=$sitrez['keywords'];
 $kewdesk=substr(strip_tags($sitrez['desc']), 0, 400);
 
 $idman=$_GET['idman'];//производители
@@ -16,8 +16,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[name]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['name'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['deskripshn']), 0, 400);
 }
 
@@ -28,8 +28,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[title]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['title'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['description']), 0, 400);
 }
 
@@ -40,8 +40,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[name]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['name'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['desc']), 0, 400);
 }
 
@@ -52,8 +52,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[title]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['title'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['description']), 0, 400);
 }
 
@@ -64,8 +64,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[name]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['name'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['desc']), 0, 400);
 }
 
@@ -76,8 +76,8 @@ $metadrez=mysql_fetch_array($metad);
 if($metadrez==FALSE){
  $flag++;
 }
-$title="$metadrez[name]";
-$keywords="$metadrez[keywords]";
+$title=$metadrez['name'];
+$keywords=$metadrez['keywords'];
 $kewdesk=substr(strip_tags($metadrez['deskripshn']), 0, 400);
 }
 if($_SERVER['SCRIPT_NAME']=='/manufacturers.php'){
@@ -86,8 +86,8 @@ if($_SERVER['SCRIPT_NAME']=='/manufacturers.php'){
 	if($metadrez==FALSE){
 	 $flag++;
 	}
-	$title="$metadrez[man_title]";
-	$keywords="$metadrez[man_key]";
+	$title=$metadrez['man_title'];
+	$keywords=$metadrez['man_key'];
 	$kewdesk=substr(strip_tags($metadrez['man_desc']), 0, 400);
 }
 if($_SERVER['SCRIPT_NAME']=='/faq.php'){
@@ -96,8 +96,8 @@ if($_SERVER['SCRIPT_NAME']=='/faq.php'){
 	if($metadrez==FALSE){
 	 $flag++;
 	}
-	$title="$metadrez[faq_title]";
-	$keywords="$metadrez[faq_key]";
+	$title=$metadrez[faq_title];
+	$keywords=$metadrez[faq_key];
 	$kewdesk=substr(strip_tags($metadrez['faq_desc']), 0, 400);
 }
 if($_SERVER['SCRIPT_NAME']=='/catalog.php'){
@@ -108,8 +108,8 @@ if($_SERVER['SCRIPT_NAME']=='/catalog.php'){
 		if($metadrez==FALSE){
 		 $flag++;
 		}
-		$title="$metadrez[title]";
-		$keywords="$metadrez[keywords]";
+		$title=$metadrez['title'];
+		$keywords=$metadrez['keywords'];
 		$kewdesk=substr(strip_tags($metadrez['description']), 0, 400);
 	}else{
 		$metad=mysql_query("SELECT `catalog_title`, `catalog_desc`, `catalog_key` FROM `seo` WHERE `id`=1");
@@ -117,8 +117,8 @@ if($_SERVER['SCRIPT_NAME']=='/catalog.php'){
 		if($metadrez==FALSE){
 		 $flag++;
 		}
-		$title="$metadrez[catalog_title]";
-		$keywords="$metadrez[catalog_key]";
+		$title=$metadrez['catalog_title'];
+		$keywords=$metadrez['catalog_key'];
 		$kewdesk=substr(strip_tags($metadrez['catalog_desc']), 0, 400);
 	}
 }
