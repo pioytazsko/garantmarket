@@ -1,0 +1,148 @@
+# ------------------------------------------------------------------------------
+# - Permanent redirects 12:44 18.03.2014
+# ------------------------------------------------------------------------------
+RewriteEngine On
+
+RewriteCond %{QUERY_STRING} ^id_cat\=1$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/derevoobrabatyvayuschie-stanki/1? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=11$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/derevoobrabatyvayuschie-stanki-rejsmusy/11? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=2$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/teplovye-pushki/2? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=3$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/svarochnye-apparaty-invertory/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=4$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/elektroplug/4? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=9$
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/catalog/torcovochnaya-kombinirovannaya-pila/9? [R=301,L]
+RewriteCond %{QUERY_STRING} ^idn\=3$
+RewriteRule ^/?info\.php$ http://garantmarket.by/news/oplata-i-dostavka/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=14$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/rejsmusovyj-stanok-master-universal-rs1500/14? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=16$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-rejsmus-master-universal-r-rejsmus-/16? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=2$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/dervoobrabatyvayushhij-stanok-master-universal-2000/2? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=21$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/stanok-derevoobrabatyvayushhij-s-rejsmusom-master-universal-r-/21? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=24$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-master-praktik-2500/24? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=25$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-master-praktik-2200-/25? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=26$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-master-praktik-2000/26? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=37$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/pilnye-diski-250mm/37? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=4$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-mogilev-ie6009-a42-24-kvt-/4? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=5$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-master-universal-1800-2000/5? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=6$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/stanok-derevoobrabatyvayushhij-master-universal-2200/6? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id\=7$
+RewriteRule ^/?item\.php$ http://garantmarket.by/item/derevoobrabatyvayushhij-stanok-master-universal-2500e/7? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat\=&page\=1&idman\=10$
+RewriteRule ^/?item_man\.php$ http://garantmarket.by/manufactors/unimaster/10? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?man_cat/11/element/10$ http://garantmarket.by/catalog/derevoobrabatyvayuschie-stanki-rejsmusy/11? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/derevoobrabatyvayushhie\-stanki\-rejsmusy/11$ http://garantmarket.by/catalog/derevoobrabatyvayuschie-stanki-rejsmusy/11? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/derevoobrabatyvayushhie\-stanki/1$ http://garantmarket.by/catalog/derevoobrabatyvayuschie-stanki/1? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/elektroplug\-lebedka\-selskoxozyajstvennaya\-ls100/4$ http://garantmarket.by/catalog/elektroplug/4? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/nozhi\-remni\-pilnye\-diski\-i\-komplektuyushhie\-dlya\-derevoobrabatyvayushhix\-stankov/13$ http://garantmarket.by/catalog/nozhi-remni-pilnye-diski-i-komplektuyushhie-dlya-derevoobrabatyvayuschix-stankov/13? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/torcovochnaya\-kobinirovannaya\-pila\-/9$ http://garantmarket.by/catalog/torcovochnaya-kombinirovannaya-pila/9? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?catalog/ulichnyj\-obogrevatel\-infrakrasnyj\-enders\-germaniya/12$ http://garantmarket.by/catalog/ulichnyj-obogrevatel-infrakrasnyj/12? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?man_cat/3/element/10$ http://garantmarket.by/catalog/svarochnye-apparaty-invertory/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?man_cat/4/element/11$ http://garantmarket.by/catalog/elektroplug/4? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?man_cat/8/element/10$ http://garantmarket.by/catalog/pushki-teplovye-dizelnye/8? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?man_cat/9/element/10$ http://garantmarket.by/catalog/torcovochnaya-kombinirovannaya-pila/9? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?manufactors/manufactor/10$ http://garantmarket.by/manufactors/unimaster/10? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?manufactors/manufactor/11$ http://garantmarket.by/manufactors/rup-zavod-mogilevliftmash/11? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/13$ http://garantmarket.by/news/ije-6009-mogilev-vsego-365/13? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/14$ http://garantmarket.by/news/chto-mozhno-najti-na-nashem-sajte/14? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/15$ http://garantmarket.by/news/blagodarim-kompaniju-studio-aj-ti-za-sozdannyj-sajt/15? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/17$ http://garantmarket.by/news/novinka-stanki-master-praktik-v-prodazhe/17? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/19$ http://garantmarket.by/news/sravnitelnaja-tablica-derevoobrabatyvajuschih-stankov-master-universal/19? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/20$ http://garantmarket.by/news/master-praktik-sravnitelnaja-tablica-parametrov-modelej/20? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/21$ http://garantmarket.by/news/derevoobrabatyvajuschie-stanki-master-praktik/21? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/22$ http://garantmarket.by/news/akcija-stanok-ije6009_a4_2-po-nizkoj-stoimosti/22? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/news/23$ http://garantmarket.by/news/v-prodazhe-pojavilis-nozhi-i-remni-dlja-master-praktik/23? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/noname/3$ http://garantmarket.by/news/oplata-i-dostavka/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?news/noname/9$ http://garantmarket.by/news/kontakty/9? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?newscat/news/3$ http://garantmarket.by/newscat/novosti/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^/?newscat/noname/3$ http://garantmarket.by/newscat/novosti/3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat=1&man=12
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/manufactors/belmash-sdm-master-praktik/12 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat=1&man=11
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/manufactors/rup-zavod-mogilevliftmash/11 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat=1&man=10 
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/manufactors/unimaster/10 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat=1&man=9
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/manufactors/oao-texnopribor/9 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_cat=16&man=13
+RewriteRule ^/?catalog\.php$ http://garantmarket.by/manufactors/stavr/13
+
+# ------------------------------------------------------------------------------
+
+
+
+ErrorDocument 404 /err404.html
+
+AddDefaultCharset UTF-8
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.garantmarket\.by$ [NC]
+RewriteCond %{REQUEST_URI} !^/robots.*
+RewriteRule ^(.*)$ http://garantmarket.by/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://garantmarket.by/ [R=301,L]
+
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !(.*)/$
+#RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+
+
+RewriteRule ^catalog/(.*)/(.*)$ catalog.php?id_cat=$1&id=$2 [L]
+
+
+
+RewriteRule ^manufactors/(.*)/(.*)$ item_man.php?idman=$2&olo=1 [L]
+RewriteRule ^item_manufactors/(.*)/(.*)/(.*)$ item_man.php?idman=$1&id_cat=$3&olo=1 [L]
+
+RewriteRule ^news/(.*)/(.*)$ info.php?idn=$2&olo=1 [L]
+
+RewriteRule ^man_cat/(.*)/(.*)/(.*)$ catalog.php?id_cat=$1&man=$3&olo=1 [L]
+RewriteRule ^catalog_all/(.*)$ catalog.php?p=$1&olo=1 [L]
+RewriteRule ^manufactor/(.*)$ manufacturers.php=$1 [L]
+RewriteRule ^newscat/(.*)/(.*)$ news.php?idcat=$2&olo=1 [L]
+
+
+
+

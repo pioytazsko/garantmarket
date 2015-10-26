@@ -1,0 +1,112 @@
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: whitesmoke;
+}
+
+button{
+padding: 3px 15px;
+font-size: 11px;
+}
+.files {
+    width: 50%;
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: ghostwhite;
+    float: right;
+    clear: left;
+    overflow-y: scroll;
+}
+
+.fileblock {
+    font-family: sans-serif;
+    width: 100%;
+    float: left;
+    clear: left;
+    border-bottom: 1px grey solid;
+    background-color: #f0f0d2;
+}
+
+.fileblock:hover {
+    /*    background-color: #b5b5b5;*/
+}
+
+.filename {
+    width: 80%;
+    float: left;
+    /*    clear: left;*/
+    padding: 5px;
+}
+
+.date {
+    width: 50%;
+    float: right;
+}
+
+.export {
+    float: left;
+    clear: left;
+}
+
+.back_to_menu {
+    float: left;
+    clear: left;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+.back_to_menu:hover {
+    background-color: burlywood;
+}
+
+.delete_button {
+    width: 50%;
+    float: right;
+    clear: right;
+
+}
+
+.select_file {
+    float: left;
+    margin-top: 10px;
+}
+.export_files{
+    float: left;
+    width: 100%;
+    border: solid 1px grey;
+}
+.import_interface
+{
+border: 0px #000 solid;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0px 0px 5px grey;
+    font-family: sans-serif;
+    text-shadow: 0px 0px 1px #767676;
+    color: #000000;
+}
+
+}
+#status{
+display: none;
+    
+}
+
+#reload {
+    float: left;
+}
+
+#delete_all {
+    float: right;
+}
+
+#delete_select {
+    float: right;
+}
+#unselect{
+float:right;}

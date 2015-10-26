@@ -1,0 +1,18 @@
+
+
+.n_news{ width:100%; margin-bottom:20px;}
+.n_news_top{ width:100%; min-height:23px; background-color:#3BA0C5; }
+.n_telephone{font-size:18px; color:#FFFFFF; font-weight:600; padding-left:10px; width:100%; min-height:23px;}
+.n_header{ width:100%;  min-height:25px; margin-top:10px;}
+.n_news_bottom{ width:100%;}
+.n_left_news{ width:20%; float:left;}
+.n_right_news{ width:100%; float:left;}
+.n_news_text{ text-align:justify;}
+.n_all a{ color:#3C53B0; float:right;}
+.n_window{ float:left;}
+.n_header_date{ float:left;}
+.n_header_date{ color:#6C90AB; margin-right:15px;}
+.n_header_date a{ color:#6C90AB;}
+.n_window{ margin-right:10px;}
+.button{ width:917px; height:25px; text-align:center; margin-top:10px;}
+.push{ width:22px; height:22px; border:1px solid #CCCCCC; border-radius:5px; text-align:center; margin:0px 5px; float:left;}

@@ -1,0 +1,169 @@
+body{ width:100%; margin:0px; padding:0px; background:url(../image/base_bg.jpg) no-repeat; font-family:arial;}
+iframe{height: 0;}
+#content{ width:1000px; margin:0px auto;}
+p{margin:0px; padding:0px;}
+
+
+
+.top{ width:1000px; margin:0px auto 0px auto; height:40px;}
+.menu_top{ width:493px; height:20px; padding-top:10px; float:left; margin-left:0px;}
+.top_punct{color: #26509A;
+  font-size: 12px;
+  float: left;
+  padding: 4px 1px 0px 9px;}
+.top_punct a{ text-decoration:none; color:#26509A;}
+.top_punct a:hover{ text-decoration:none; color:#fff;}
+.razdel2{ float:left; padding:5px 5px;}
+.search{ width:387px; height:25px; float:left; margin-top:5px; margin-left:120px;}
+.lupa{ float:left; margin-top:2px;}
+.search{ float:left;}
+.search_pole{ width:260px; /* height:27px; background:url(../image/search_1.png) no-repeat; */float:left;}
+.search_pole input{  float: left;
+  width: 253px;
+  height: 20px;
+  margin-left: 6px;
+  border: none;
+  margin-top: 3px;
+  border: 1px solid #999;
+  border-radius: 3px;}
+.but input{width: 102px;
+  height: 24px;
+  float: left;
+  /* border: none; */
+  /* background: url(../image/search_button_1.png) no-repeat; */
+  margin-top: 3px;
+  font-weight: 600;
+cursor:pointer
+  /* color: #FFFFFF; */}
+
+.top1{padding-top:21px}
+
+.head{ width:1000px; height:121px; background:url(../image/header.png) no-repeat;}
+.head_top{ width:1000px; height:85px; /*margin-left:283px;*/}
+.head_bot{ width:1000px; height:35px; float:left;}
+.punct_head{  color: #2C476F;
+    font-size: 18px;
+  /* font-style: italic; */
+  padding: 7px 0px 0px 34px;
+  float: left;
+  font-weight: bold;}
+.punct_head a{ text-decoration:none; color:#1B7192;}
+.punct_head a:hover{ text-decoration:none; color:#999;}
+.razdel{ float:left; width:35px; height:1px; padding:3px 10px 0px 0px;}
+.head_text{ color:#FFFFFF; font-weight:600; font-size:16px; float:left;padding: 1px 0px 0px 26px;}
+
+
+
+.center{ width:1000px; height: auto; margin:20px auto 20px auto;}
+.left{ float:left; width:210px;}
+.header_small{ width:210px; height:28px; background:url(../image/top_1.png) no-repeat; color:#FFFFFF;   font-weight: bold;
+    font-size: 18px;
+  font-style: italic;
+  padding: 4px 0px 0px 10px;}
+.left ul{  list-style-type: none;
+  margin: 0px 0px 10px 0px;
+  padding: 3px 0px 0px 10px;}
+.left ul a{ text-decoration:none; color:#006DA6;}
+.left ul a:hover { color:#639CBA;}
+.left li{ color:#006DA6; font-size: 14px;
+  font-weight: 600;}
+.sep{ margin:4px 0px;}
+.left_text{color:#006DA6; font-size:14px; font-weight:700; text-align:left;   margin-left: 10px;
+  margin-top: 10px;}
+.b11 a{color:#006DA6;}
+.b11 a:hover{color:#639CBA;}
+.right{ float:left; width:750px; margin-left:40px; }
+.header_big{  width: 788px;
+  height: 28px;
+  background: url(../image/top_2.png) no-repeat;
+  /* margin-top: 12px; */
+  color: #FFFFFF;
+    font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+    padding: 4px 0px 0px 10px;
+  margin-bottom: 20px;}
+.right p{ color:#3B3B3B; text-align:justify; font-size:12px;}
+.blok_tovar{   width: 737px;
+  border-bottom: 1px dotted #B5B4B4;
+  margin-top: 22px;
+  margin-left: 22px;}
+.tovar_name{ color:#006DA6; font-size:20px; font-weight:700;}
+.tovar_name a{color:#006DA6; text-decoration:none;}
+.tovar_name a:hover{color:#333333; text-decoration:none;}
+
+.tovar_image{ position: relative;
+  float: left;
+    clear: left;
+
+  width: 240px;
+  text-align: center;
+  margin: 5px 0 0 0;}
+.tovar_opis{ float:left; width:497px; margin-top:20px;}
+.opis_punct{ width:475px; height:18px; border:0px solid #FFFFFF; border-radius:5px; color:#333333; font-size:12px; font-weight:600; padding:2px 0px 0px 5px;}
+.bs{ background:#D9EDFA; }
+.description{ width:735px; color:#333333; font-size:14px; margin-top:10px;}
+.description a{color:#006DA6;}
+.description a:hover{color:#333;}
+.cena{  color: #006DA6;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  height: 43px;
+	 }
+.cena22{  color: #006DA6;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  height: 43px;
+	 }
+
+.cena-h { width: 209px;}
+.cena2{font-size: 13px;}
+.buy { border:none; border:1px solid #3366FF; background:#0078BB; border-radius:5px; float:left; color:#FFFFFF; width:100px; height:21px; font-weight:bold; margin-top:5px; float:left; font-size:12px; text-align:center; float:right; padding-top:3px;}
+.buy a{ text-decoration:none; color:#FFFFFF;}
+.navigation{text-align:right; float:right; margin-top:5px;}
+.navi_number{ float:left; color:#006DA6;margin-left:5px;}
+.navi_number_active{ float:left;color:#006DA6; margin-left:5px;}
+.navi_text{ float:left; color:#006DA6; }
+.navi_number a{color:#006DA6;}
+.navi_number_active a{ color:#006DA6; text-decoration:none;}
+
+
+
+.podval{ width:1000px; height:140px; background:url(../image/bg_footer.png) repeat-x; margin-top:10px;}
+.podval_left{ width:450px; float:left;  margin:20px 0px 0px 30px;}
+.header_large{ width:400px; height:28px; background:url(../image/top_3_1.png) no-repeat; color:#FFFFFF; font-weight:bold; font-size:14px; font-style:italic; padding:5px 0px 0px 10px;}
+.podval_right{ width:450px; float:left;  margin:20px 0px 0px 35px;}
+.podval_text{ color:#023F82; font-size:12px;}
+
+.tovar_image img{max-height:170px; max-width:230px;}
+
+.imgman img{float:left;}
+.blok_man{width:100%; margin-bottom:20px;}
+
+.namevop{font-size:12px; color:#999999;}
+.textvop{font-size:14px; color:#333333; font-weight:600; text-align:justify;}
+.textotv{font-size:14px; color:#333333; text-align:justify; font-style:italic; margin-bottom:20px;}
+
+.blok_man a{font-size:14px; font-weight:700; text-decoration:none; color:#006DA6;}
+.blok_man img{margin-right:5px; margin-bottom:5px;}
+.blok_man{font-size:12px; font-style:italic;}
+
+.shop_opisanie p{padding: 10px 20px;}
+
+.right p{padding:0px 10px;}
+
+.n_news_text{padding:0px 10px;}
+
+.cat-my li{  display: block;
+  border: 1px solid #B5B5B5;
+  border-radius: 3px;
+  float: left;
+  height: 215px;
+  width: 200px;
+  margin: 0 0 15px 15px;}
+
+.cat-my img {/*padding: 10px;*/
+  max-height: 140px;
+  max-width: 180px;}

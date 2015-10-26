@@ -1,0 +1,258 @@
+ 	.shop_right{ width:100%; float:left; margin-top:10px;}
+.shop_right_top{ width:100%; margin-left:10px;}
+.shop_name{ font-size:20px; font-weight:700;}
+.shop_button{width: 98%; */
+  /* height: 32px; */
+  /* border-radius: 5px; */
+  /* background-color: #EBEBEB; */
+  float: right;
+  }
+.shop_button2{ width:50%; height:32px; /*float:left;*/ margin-top:10px;}
+.shop_button2_left{ width:32px; height:32px; background:url(../image/korzina.png) no-repeat; float:left;}
+.shop_button2_left1{ width:32px; height:32px; background:url(../image/vopros.png) no-repeat; float:left;}
+.shop_button2_left2{ width:32px; height:32px; background:url(../image/shtrix_kod.png) no-repeat; float:left;}
+.shop_button2_left3{ width:32px; height:32px; background:url(../image/schet.png) no-repeat; float:left;}
+.shop_button2_left4{ width:32px; height:32px; background:url(../image/birka.png) no-repeat; float:left;}
+.shop_button2_left5{ width:32px; height:32px; background:url(../image/otzyv.png) no-repeat; float:left;}
+.shop_button2_center{   /* width: 85%; */
+  height: 32px;
+  background: url(../image/bottom_center.png) repeat-x;
+  float: left;
+  text-align: center;
+  padding-top: 6px;
+  padding: 7px 24px;
+color: rgb(115, 115, 115);
+  font-weight: bold;}
+.shop_button2_center a{ font-size:16px; color:#656565; text-decoration:none; font-weight:700;}
+.shop_button2_center2 a{ font-size:16px; color:#656565; text-decoration:none; font-weight:700;}
+.shop_button2_right{ width:10px; height:32px; background:url(../image/bottom_left.png) no-repeat; float:left;}
+.shop_button3{ width:100%; height:32px; margin-top:10px; float:left;}
+.shop_button2_center2{ width:90%; height:32px; background:url(../image/bottom_center.png) repeat-x; float:left; text-align:center; padding-top:6px;}
+.shop_blok{ width:100%;}
+.shop_firma{ width:40%; float:left; text-align:center;}
+.shop_firma_name{ font-weight:600;}
+.shop_social{ width:60%; float:left; text-align:center;}
+.shop_ceti{ width:50%; margin:0 auto;}
+.shop_mail{ float:left; margin-right:10px; margin-bottom:5px;}
+.shop_opisanie2{ width:100%;}
+.shop_header{ width:100%;  font-size:28px; font-weight:700; background:0% 50% url(../image/polosa.png) repeat-x; margin-top: 45px;
+  margin-bottom: 20px;}
+.shop_head{ width: 100%;
+  font-size: 26px;
+  font-weight: 700;
+  background: 0% 43% url(../image/polosa.png) repeat-x;
+  margin-top: 41px;}
+.shop_opism{width:230px; height:25px; background-color:#ffffff; color:#333333;}
+.shop_opis3{height: 36px;
+  background-color: #ffffff;
+  color: #333333;
+  padding-right: 37px;
+  display: inline-block;}
+.shop_opis1{height: 36px;
+  background-color: #ffffff;
+  color: #333333;
+  padding-right: 37px;
+  display: inline-block;}
+.shop_opis{height: 36px;
+  background-color: #ffffff;
+  color: #333333;
+  padding-right: 37px;
+  display: inline-block;}
+.shop_opismm{  /* min-width: 100px; */
+  height: 36px;
+  background-color: #ffffff;
+  color: #333333;
+  padding-right: 37px;
+  display: inline-block;}
+.shop_katalog{ width:480px; height:280px; border:1px solid #CCCCCC; float:left; margin-left:10px; text-align:center;}
+.shop_buy{   font-size: 34px;
+  font-weight: 600;
+  float: left;
+  margin-top: 3px;
+color: #333;
+  /* margin-left: 5px; */border-bottom: 1px solid;}
+
+.shop_buy_no{   font-size: 34px;
+  font-weight: 600;
+  float: left;
+  margin-top: 3px;
+	color: #BDBDBD;
+  /* margin-left: 5px; */border-bottom: 1px solid;
+	width: 315px;}
+.shop_buy2{ font-size:18px; color:#333237; float:left;margin-top:4px;}
+
+
+.shop_center{ width:100%;}
+.shop_opisanie1{ width:100%; margin-top:10px; }
+.shop_all a{ color:#3C53B0; float:right;}
+.shop_head1{ width: 100%;
+  font-size: 26px;
+  font-weight: 700;
+  background: 0% 43% url(../image/polosa.png) repeat-x;
+  margin-top: 41px;
+margin-bottom: 20px;}
+.shop_head3{ width:401px; height:25px; font-size:20px; font-weight:700;}
+
+
+.shop_bottom{ width:100%;}
+.shop_tovar2{   width: 192px;
+  height: 299px;
+  border: 1px solid #CCCCCC;
+  margin-right: 7px;
+  float: left;
+  text-align: center;
+  border-radius: 3PX;}
+.shop_date{ color:#999999;}
+.shop_katalog_name{   /* font-weight: 600; */
+  height: 53px;
+  color: #333333;
+  font-size: 12px;
+  overflow: hidden;
+    padding: 10px 10px 0px 10px;}
+.shop_katalog_name a{color:#333333; font-size:12px; font-style:italic;}
+.shop_cena{background-color: #E6E4E4;
+  height: 75px;
+  border-radius: 3px;
+  padding-top: 13px;
+  color: #000;
+  font-size: 12px;}
+.shop_tovar_kart{ margin-top:5px}
+
+#gallery .shop_logo img{max-height:90px; border:0;  margin: 8px 14px;}
+.shop_kart img{max-height:200px; max-width:300px;}
+.shop_kart{width:480px; height:210px; text-align:center;}
+.shop_tovar_kart img{max-height: 145px;
+  max-width: 190px;}
+.shop_galery_top img{max-width:390px; max-height:220px;}
+
+p{margin:0px; padding:0px;}
+
+.add_otziv{font-size:18px; font-weight:700;}
+.otzivform input{width:300px;}
+.otzivform textarea{width:300px; height:150px;}
+
+#gallery {/*width:400px; */ margin:0 auto; /* text-align:center;*/}
+#gallery ul {list-style:none; margin:0px; padding:0px;}
+#gallery li {/*display: inline;*/ margin-right: 3px; margin-bottom: 3px}
+#gallery #main-img {background: url(bg_img.png) no-repeat 0 0;}
+#gallery img{max-width:400px; max-height:300px; border:1px solid #CCCCCC;  border-radius: 5px;}
+#gallery li img{max-width:90px; max-height:90px;}
+.osnimg{/*width:400px; height:300px;*/ float: left;margin-right: 6px;}
+
+.man_v_cat{float:left;/*padding:0px 5px 0px 5px; border:1px solid #CCCCCC; height:20px; background-color:#727370;  text-align:center; border-radius:4px*/;}
+.man_v_cat a{/*color:#FFFFFF;*/   color: #3B3B3B;
+  text-decoration: none;
+  margin-left: 10px;}
+.man_v_cat a:hover{color:#0B9BF9}
+.spmancat{      width: 731px;
+  margin-top: 15px;
+  background-color: rgb(231, 229, 229);
+  border: 1px solid #B5B4B4;
+  border-radius: 3px;
+  padding: 5px 0 5px 5px;
+  font-size: 13px;
+  margin-bottom: 20px;
+	font-weight:600}
+
+
+
+
+
+#idv{background:url(../image/korzina2.png) no-repeat; border:none; width:107px; height:23px; padding-top:4px; font-size:12px; color:#333333; margin-top:5px; cursor:pointer; }
+
+.kart_tovar img{max-width:200px; max-height:160px;}
+.kart_tovar{width:220px; height:170px;}
+
+h1{font-size:26px; color:#333333; /*font-style:italic; margin:0px 4px 4px 4px;*/  padding:0px; color:#333333;  /*border-bottom: 1px solid #999;*/}
+h2{font-size:18px; color:#333333; font-style:italic; margin:0px 4px 4px 4px; padding:0px; color:#333333;}
+
+.blok_name h1{  margin: 3px 0px 30px 0px;}
+
+.blokpodkat{width: 173px;
+  height: 160px;
+  border: 2px solid #CCCCCC;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;}
+
+.blokpodkat1{
+width: 173px;
+  height: 160px;
+  border: 2px solid #CCCCCC;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 12px;}
+.blokpodkat1 a{font-weight:600; color:#333333;}
+.blokpodkat1:hover{
+ /* width: 80%;*/
+  /*max-width: 550px;*/
+  /*margin: 2em auto;*/
+  /*padding: 1em;*/
+  box-shadow: 0 0 2px 2px rgba(0, 124, 191, 1);
+}
+
+.podkatname{text-align:center; height:40px; border-bottom:none;  padding: 5px 10px 0px 10px;}
+.podkatname a{text-decoration:none; }
+.podkatimg{text-align:center;}
+.blokpodkat a{font-weight:600; color:#333333;}
+.blokpodkat:hover{
+ /* width: 80%;*/
+  /*max-width: 550px;*/
+  /*margin: 2em auto;*/
+  /*padding: 1em;*/
+  box-shadow: 0 0 2px 2px rgba(0, 124, 191, 1);
+}
+.catvl{font-size:20px; font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:600;margin: 10px 0px 20px 40px;}
+
+
+.blocksortirovki{height:28px; background: url("http://www.kuvalda.garant.by/image/top_2.png") no-repeat transparent; padding-left:1%; width:780px; padding-top:5px; color:#FFFFFF;}
+.blocksortirovki a{color:#FFFFFF; font-weight:700;}
+.mannamepage{font-size:18px; font-weight:700;}
+
+.maninfopage img{float:left; margin:0px 10px 10px 0px;}
+.infocat{width:100%; }
+.catname{  font-size: 12px;
+  font-weight: 600;
+  width: 750px;
+  color: #666666;}
+.shop_firma_name a{color:#333333; /*font-style:italic;*/}
+.catname a{color:#333333; font-size:12px;}
+.catimg img{max-width:710px; /*float:left;*/ margin:0px 10px 10px 10px;}
+
+.shop_button5{ width: 78%;
+  height: 28px;
+  /* border-radius: 5px; */
+  background-color: #EBEBEB;
+  margin-left: 91px;
+  padding-left: 1%;
+  margin-bottom: 1px;
+ /* border-bottom: 1px solid #EBEBEB;*/}
+.shop_buttonim img{  margin: 5px 9px 0px 0px;
+  width: 18px;}
+.shop_buttonim{float:left;}
+.shop_buttonval{  float: left;
+  padding-top: 6px;
+  font-size: 15px;
+  color: #333;}
+
+.titlezak2{width:45%; border-bottom:1px solid #999999;  border-right:1px solid #999999; float:left; height:20px; padding-left:1%;}
+.collitem2{width:15%; border-bottom:1px solid #999999;  border-right:1px solid #999999; float:left; height:20px; padding-left:1%; text-align:center;}
+.priceitem2{width:15%; border-bottom:1px solid #999999;  float:left; height:20px; padding-left:1%;}
+.itogo{width:70%; padding-left:1%;}
+.formzakus{padding-left:1%;}
+
+.titlezak{width:45%; border-bottom:1px solid #999999; border-top:1px solid #999999; border-right:1px solid #999999; float:left; height:20px; padding-left:1%; font-weight:700;}
+.collitem{width:15%; border-bottom:1px solid #999999; border-top:1px solid #999999; border-right:1px solid #999999; float:left; height:20px; padding-left:1%; font-weight:700;}
+.priceitem3{width:15%; border-bottom:1px solid #999999; border-top:1px solid #999999; float:left; height:20px; padding-left:1%; font-weight:700;}
+.blokpodkat a{text-decoration:none;}
+.collitem2 input{width:20px; height:12px; margin-top:1px;}
+
+.blok_name{/*text-align:center;*/ font-size:18px; font-weight:600; /*width:760px;*/}
+#comentblock{position:fixed; top:300px; left:37%; width:19%; padding:2% 1%; background:#FFFFFF; border:1px solid #54B846; text-align:center; font-size:16px; font-weight:700; color:#54B846;}
+
+.podkatimg img{max-height:110px; max-width:171px;}
+
+.shop_opis2{width:100px; background:#FFFFFF;}

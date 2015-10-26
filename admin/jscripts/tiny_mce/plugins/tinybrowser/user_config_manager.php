@@ -1,0 +1,1 @@
+<?php $config['resizeThumb']=1; $config['widthThumb']=200; $config['heightThumb']=200; $config['resizeImg']=1; $config['widthImg']=600; $config['heightImg']=600; $config['rewriteName']=1; $config['rewriteWidth']=13; $config['systemThumb']=1; ?>

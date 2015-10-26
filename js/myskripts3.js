@@ -1,0 +1,1 @@
+$(document).mouseup(function(e){var container=$('#comentblock');if(container.has(e.target).length===0){container.hide();}});

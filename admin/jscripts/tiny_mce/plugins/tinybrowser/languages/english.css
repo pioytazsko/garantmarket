@@ -1,0 +1,45 @@
+/*********************************************************************************************
+ * MODx PLUGIN: Basic Manager
+ * VERSION:     1.0
+ * DESCRIPTION: File Manager
+ * WRITTEN BY:  Kobezzza (kobezzza@mail.ru)
+ * DATE:        29/09/2010
+ *
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://gnu.org).
+ *********************************************************************************************/
+@charset "utf-8";
+
+#Refresh a{
+	height: 22px;
+	width: 23px;
+	display: block;
+	background: url(english.png) -160px -1px no-repeat
+}
+#Refresh a:hover{ background: url(english.png) -183px -1px no-repeat }
+
+#Order{
+	width: 105px;
+	background: url(english.png) 0 -48px no-repeat
+}
+#Order:hover{ background: url(english.png) -105px -48px no-repeat }
+
+#Views{ width: 84px }
+.PlateView{ background: url(english.png) 0 -24px no-repeat }
+.PlateView:hover{ background: url(english.png) -84px -24px no-repeat }
+.TableView{ background: url(english.png) -168px -24px no-repeat }
+.TableView:hover{ background: url(english.png) -252px -24px no-repeat }
+.ListView{ background: url(english.png) -336px -24px no-repeat }
+.ListView:hover{ background: url(english.png) -420px -24px no-repeat }
+
+#Create{
+	width: 97px;
+	background: url(english.png) 0 -72px no-repeat
+}
+#Create:hover{ background: url(english.png) -97px -72px no-repeat }
+
+#Upload{
+	width: 79px;
+	background: url(english.png) 0 0 no-repeat
+}
+#Upload:hover{ background: url(english.png) -79px 0 no-repeat }

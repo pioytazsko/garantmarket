@@ -1,0 +1,114 @@
+body{margin:0;
+	background:url(images/bot_start_bg.png);
+}
+
+#top_start{
+	background-image:url(images/top_start_bg.png);
+	background-repeat:repeat-x;
+	height:45px;
+}
+
+#top_start_logo{
+	background-image:url(images/top_start_logo.png);
+	background-repeat:no-repeat;
+	height:45px;
+	background-position: 100%;
+}
+#mid_start{
+	background-image:url(images/mid_start_bg.png);
+	background-repeat:repeat-x;
+	height:206px;
+}
+.mid_start_pic{
+	display:none;
+	background-image:url(images/mid_start_pic.png);
+	background-repeat:no-repeat;
+	height:206px;
+	background-position: 50%;
+}
+.rotate{
+	background-image:url(images/view-refresh.png);
+	background-repeat:no-repeat;
+	width:48px;
+	height:48px;
+	position:absolute;
+}
+#bot_start_bg{
+}
+
+#bot_start_panel{
+	width:300px;
+	height:200px;
+	margin:0 auto;	
+	margin-top:5px;
+}
+#bot_start_panel_top{
+	background-image:url(images/bot_start_panel_top.png);
+	background-repeat:no-repeat;
+	height:40px;
+}
+#start_info{
+	color:white;
+	font-size:13px;
+	padding-left: 35px;
+	padding-top: 11px;
+}
+#bot_start_panel_login{
+	background-image:url(images/bot_start_panel_login.png);
+	height:50px;	
+}
+#start_login{
+	color:white;
+	font-size:14px;
+	margin: 0px auto;
+	padding-left: 5px;
+	padding-top: 20px;
+	letter-spacing: 0.09em;
+}
+#bot_start_panel_pass{
+	background-image:url(images/bot_start_panel_login.png);
+	height:50px;	
+}
+#start_pass{
+	color:white;
+	font-size:14px;
+	margin: 0px auto;
+	padding-left: 5px;
+	padding-top: 20px;
+	letter-spacing: 0.09em;
+}
+#enter{
+	background-image:url(images/enter.png);
+	background-repeat:no-repeat;
+	background-position:100%;
+	width:57px;
+	height:23px;
+	float:right;
+	color: white;
+	border:hidden;
+	margin-top:12px;
+}
+#login{
+	border:hidden;
+	height: 24px;
+	margin-left: 95px;
+	margin-top: 16px;
+	position: absolute;
+	width: 200px;
+}
+#pass{
+	border:hidden;
+	height: 24px;
+	margin-left: 95px;
+	margin-top: 16px;
+	position: absolute;
+	width: 200px;
+}
+#preloader{
+	background-image:url(images/preloader.gif);
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin-right: 100px;
+	margin-top: 12px;
+}

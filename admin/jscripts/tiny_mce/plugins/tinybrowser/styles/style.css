@@ -1,0 +1,321 @@
+/*********************************************************************************************
+ * MODx PLUGIN: Basic Manager
+ * VERSION:     1.0
+ * DESCRIPTION: File Manager
+ * WRITTEN BY:  Kobezzza (kobezzza@mail.ru)
+ * DATE:        29/09/2010
+ *
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://gnu.org).
+ *********************************************************************************************/
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-size: 13px !important
+}
+
+input[type='checkbox']{
+	border: none;
+	padding: 0;
+	margin: 3px;
+	background-color: transparent;
+	outline: none
+}
+
+input[type='text']{ width: 120px }
+.two{ width: 50px !important }
+
+input[type='button']{ margin-right: 5px }
+
+a{
+	text-decoration: none;
+	color: #000
+}
+a:hover{ color: #069 }
+a img{ border: none }
+
+table{ width: 100% }
+th{
+	font-weight: normal;
+	background-image: url(../images/select.png);
+	text-align: left;
+}
+td{
+	border: 1px #CCC dashed;
+	border-collapse: collapse;
+	padding: 3px
+}
+
+.BigDescription{
+	padding: 17px 0 0 140px;
+	margin: 10px;
+	height: 99px;
+	background: transparent url(../images/EmptyFolder.png) no-repeat;
+	font-size: 14px !important
+}
+
+#MainContent{ background-color: #F0F0EE }
+#MainContent ul{
+	padding: 0;
+	margin: 5px 30px
+}
+#MainContent li{ padding: 0 }
+
+#MainBar{
+	background-color: #AFC8E2;
+	padding: 5px
+}
+#LeftBar{
+	width: 200px;
+	border-right: #999 1px solid;
+	border-bottom: #999 1px solid;
+	float: left
+}
+#Helper{ position: absolute }
+#Helper ul, #Root{
+	padding: 0;
+	margin: 0;
+	list-style-type: none
+}
+#Helper a, #Root a{
+	display: block;
+	padding: 5px;
+	background: url(../images/select.png)
+}
+#Helper a{ border: 1px #CAE4FF solid }
+#Root a{ width: 190px }
+
+.root{
+	background: url(../images/select2.png);
+	font-size: 11px !important;
+	padding: 5px;
+	text-align: center
+}
+
+.active{
+	background: #069 none !important;
+	color: #FFF !important
+}
+
+#Cat, #MainContent{ overflow: auto }
+
+.path{
+	height: 22px;
+	background-color: #E8EFF6;
+	border-top: 1px #636669 solid;
+	border-left: 1px #636669 solid;
+	border-right: 1px #636669 solid;
+	border-bottom: 1px #A5B0BB solid
+}
+
+#Path{ width: 69% }
+#Search{
+	float: right;
+	margin-left: 2%;
+	width: 28%
+}
+#Search input{
+	padding: 0;
+	margin: 0;
+	width: 70%;
+	vertical-align: middle;
+	padding: 4px;
+	background: none;
+	border: none;
+	font-style: italic;
+	font-size: 11px !important;
+	color: #666;
+	font-family: Verdana, Geneva, sans-serif !important
+}
+#Search input:focus{ outline: none }
+.SearchFocus{
+	background: #FFF;
+	outline: 1px #D7EBFF solid;
+}
+.SearchFocus input{
+	font-style: normal !important;
+	color: #000 !important
+}
+#Search img{
+	float: right;
+	position: relative;
+	right: 3px;
+	top: 4px
+}
+
+.path[id='Refresh']{
+	border-top: none !important;
+	border-bottom: none !important
+}
+#Refresh{
+	position: relative;
+	right: -4px;
+	float: right;
+	width: 23px
+}
+
+#HeadBar{
+	height: 32px;
+	background: url(../images/HeadBar.png) repeat-x
+}
+#HeadBar ul{
+	padding: 0;
+	margin: 0
+}
+#HeadBar ul li{
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	float: left
+}
+#HeadBar li ul{
+	background-color: #F0F0F0;
+	border: 1px #979797 solid;
+	margin-top: 5px;
+	left: 3px;
+	z-index: 10;
+	position: absolute
+}
+#HeadBar li ul li{
+	background: url(../images/separator.png) repeat-x bottom;
+	padding-top: 1px;
+	display: block
+}
+#HeadBar li ul li a{
+	padding: 2px 7px 3px 7px;
+	width: 126px;
+	display: block
+}
+#HeadBar li ul li a:hover{ background: url(../images/select.png) repeat-x }
+
+#Order, #Views, #Create, #Upload{
+	display: block;
+	position: relative;
+	top: 4px;
+	left: 2px;
+	height: 24px
+}
+
+.cat{ list-style-image: url(../images/cat.png) }
+.img{ list-style-image: url(../images/img.png) }
+.file{ list-style-image: url(../images/file.png) }
+.media{ list-style-image: url(../images/media.png) }
+.audio{ list-style-image: url(../images/audio.png) }
+.zip{ list-style-image: url(../images/zip.png) }
+.html{ list-style-image: url(../images/html.png) }
+
+.PathText{ font-size: 12px !important }
+.PathText img{
+	position: relative;
+	top: 3px;
+	left: 3px;
+	margin-right: 5px
+}
+
+a[rel^='delete'], a[rel^='rename'], a[rel^='edit']{ margin: 3px }
+
+.center{ text-align: center }
+
+/* Всплывающее меню */
+
+.overlay{
+	background: transparent url(../images/alpha.png);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	display: none;
+	top: 0;
+	width: 100%;
+	z-index: 99998;
+}
+
+.MenuPos{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	display: none;
+	z-index: 99999;
+	background-color: #E8EFF6;
+	color: #000 !important;
+	padding: 5px;
+	width: 400px;
+	margin-left: -200px
+}
+.MenuPos p.center{ padding-bottom: 10px }
+
+.PopupTitle{
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.75em;
+	height: 32px;
+	background: url(../images/HeadBar.png) repeat-x;
+	color: #FFF;
+	padding: 3px 10px
+}
+
+/* Uploadify */
+
+.uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px
+}
+.uploadifyError {
+	border: 2px solid #FBCBBC !important;
+	background-color: #FDE5DD !important
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	width: 1px;
+	height: 3px
+}
+#Uploader{
+	height: 22px;
+	width: 79px
+}
+#fileQueue{
+	max-height: 250px;
+	position: fixed;
+	width: 395px;
+	left: 0;
+	bottom: 0;
+	overflow: auto
+}
+
+.plate{
+	float: left;
+	text-align: center;
+	width: 170px;
+	margin: 10px
+}
+
+#Icon{ width: 16px }
+#Name{ width: 30% }
+#Size{ width: 30% }
+#TablePath{ width: 35% }
+#Action{ width: 10% }
+.TdOdd{ background-color: #E8E8E8 }
+
+#Pref{ float: left }
+.pref td{ width: 50% }

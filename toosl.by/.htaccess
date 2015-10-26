@@ -1,0 +1,38 @@
+RewriteEngine on
+php_flag magic_quotes_gpc off
+php_flag register_globals off
+php_value error_reporting       E_ALL
+php_value display_errors        1
+
+
+RewriteCond %{HTTP_HOST} tool.by
+RewriteCond %{REQUEST_URI} !^/robots
+RewriteCond %{REQUEST_URI} !^/sadmin
+RewriteCond %{REQUEST_URI} !sadminaddons
+RewriteCond %{REQUEST_URI} !^/images
+RewriteCond %{REQUEST_URI} !^/attachments
+RewriteCond %{REQUEST_URI} !^/styles
+RewriteCond %{REQUEST_URI} !^/scripts
+RewriteCond %{REQUEST_URI} !^/webim
+RewriteCond %{REQUEST_URI} !^/support
+RewriteCond %{REQUEST_URI} !^/searchkeyword
+RewriteCond %{REQUEST_URI} !^/_1
+RewriteRule ^(.*)$ url.php 
+
+Redirect permanent /kalibr.by/catalog.php?rub=43&rub1=1822 http://tool.by/pusko_zaryadnie/
+RewriteCond %{HTTP_HOST} ^dewalt\.by$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.dewalt\.by$
+RewriteRule ^/?$ "http\:\/\/www\.tool\.by\/dewalt" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^telwin\.by$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.telwin\.by$
+RewriteRule ^/?$ "http\:\/\/www\.tool\.by\/telwin" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^shtormpower\.by$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.shtormpower\.by$
+RewriteRule ^/?$ "http\:\/\/www\.tool\.by" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^jettools\.by$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.jettools\.by$
+RewriteRule ^/?$ "http\:\/\/tool\.by\/JET" [R=301,L]
+

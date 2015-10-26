@@ -1,0 +1,196 @@
+body {
+	
+	margin:0px; 
+	background-image:url(../images/bg_main.png)
+}
+#content{  min-height:800px; width:970px; margin-left:20px; float:left;}
+#top_left {
+	width:230px; 
+	height:198px; 
+	background-image:url(../images/top_left.png);
+	 float:left;
+}
+#logo_main{
+	height:53px; 
+	background-image:url(../images/logo_main.png);
+	background-repeat: no-repeat;
+	margin-bottom:10px;
+}
+
+.kategory_punct1 input{width:400px;}
+#priceval{width:100px;}
+.welcome {color: #464646;
+font-size: 25px;
+margin-left: 80px;
+padding-bottom: 20px;
+padding-right: 20px;
+padding-top: 20px;
+text-shadow: white 1px 1px;
+display:none;
+position:relative;
+font-family:univers;
+
+}
+@font-face {
+	    font-family: univers; /* ��� ������ ��� CSS ������ */
+	    src: local("univers"), /* ��������� ������� ������ � �� ������������ */
+	    url(../font/univers.ttf); /* ���� ����� �� ����������, ����� ��������� ��� �� ���������� ���� */
+}
+
+.block{ width:122px; height:113px; margin-left:28px; float:left;}
+.punct{width:206px; height:33px; background:url(../images/green.png) no-repeat; float:right; margin-top:10px;}
+.punct a{ text-decoration:none;}
+.punct1{width:206px; height:33px; background:url(../images/green.png) no-repeat; float:right; margin-top:40px;}
+.punct1 a{ text-decoration:none;}
+
+.opis{ font-size:12px; font-family:Verdana; font-weight:700; text-align:center; color:#FFFFFF; margin-top:8px;}
+
+.remark{ width:400px; margin-left:28px; float:left;}
+.text{ width:400px; font-size:14px; height:20px; font-weight:700; color:#585858; font-family:Verdana; text-shadow: white 1px 1px;
+}
+.text1{ width:400px; font-size:12px; height:20px; font-weight:400; color:#6d6d6d; font-family:Verdana; text-shadow: white 1px 1px;
+
+}
+.name input{ width:400px; height:16px; margin-bottom:10px;}
+.name select{ width:400px; height:24px; margin-bottom:10px;}
+.name textarea{ width:400px; height:250px; margin-bottom:10px;}
+.name1 input{ width:400px; height:20px; margin-bottom:10px;}
+.name2 textarea{ width:400px; height:191px; margin-bottom:10px;}
+.name3 textarea{ width:400px; height:91px; margin-bottom:10px;}
+.edit textarea{ width:400px; height:85px; margin-bottom:10px;}
+.description textarea{ width:828px; min-height:104px; margin-bottom:10px; }
+.description{ width:828px; min-height:104px; margin-bottom:10px;}
+.new_cait{ width:828px;}
+.left{ width:400px; float:left;}
+.right{ width:400px; float:left; margin-left:28px;}
+.update input{ margin-top:20px; margin-left:780px;}
+
+
+
+.pole_user{ width:1220px;  border:1px solid #999999; border-radius:5px; margin-top:10px;}
+.user{ width:1220px; height:30px; border-bottom:1px solid #999999; background:#E8E8E8; color:#777777; padding-top:6px; padding-left:5px; font-weight:600;}
+.line{ width:1220px; height:25px;}
+.line_punct1{ width:80px; height:25px; float:left; color:#5D5D5D;  text-align:center;}
+.line_punct2{ width:150px; height:25px; float:left; color:#5D5D5D;text-align:center;}
+.line_punct3{ width:200px; height:25px; float:left; color:#5D5D5D;text-align:center;}
+.line_punct4{ width:120px; height:25px; float:left; color:#5D5D5D;text-align:center;}
+.line_punct5{ width:266px; height:25px; float:left; color:#5D5D5D;text-align:center;}
+.line_punct6{ width:100px; height:25px; float:left; color:#5D5D5D;text-align:center;}
+.filling{ width:917px; height:25px; margin:5px 0px;}
+.filling_punct1{ width:80px; height:25px; float:left; color:#5D5D5D; font-weight:600; text-align:center;}
+.filling_punct2{ width:150px; height:25px; float:left; color:#5D5D5D; font-weight:600;text-align:center;}
+.filling_punct3{ width:200px; height:25px; float:left; color:#5D5D5D; font-weight:600;text-align:center;}
+.filling_punct4{ width:120px; height:25px; float:left; color:#5D5D5D; font-weight:600;text-align:center;}
+.filling_punct5{ width:266px; height:25px; float:left; color:#5D5D5D; font-weight:600;text-align:center;}
+.filling_punct6{ width:100px; height:25px; float:left; color:#5D5D5D; font-weight:600;text-align:center;}
+.button{ width:917px; height:25px;}
+.push{ width:22px; height:22px; border:1px solid #CCCCCC; border-radius:5px; text-align:center; margin:0px 5px; float:left;}
+
+.button a{ text-decoration:none; color:#000000;}
+.head{ width:1220px; height:25px;}
+.head_punct1{ width:500px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.head_punct2{ width:250px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin:0px 5px;}
+.head_punct3{ width:150px; height:25px; float:left; color:#5D5D5D; font-weight:600;}
+.head_rating{ width:150px; height:25px; float:left; color:#5D5D5D; font-weight:600;}
+.kategory{ width:1220px; height:25px; margin-top:5px;}
+.kategory_punct1{width:555px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px; overflow:hidden;}
+.kategory_punct2{ width:225px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin:0px 5px;}
+.kategory_punct3{ width:120px; height:25px; float:left; color:#5D5D5D; font-weight:600; text-align:center;}
+.rating{ width:150px; height:25px; float:left; color:#5D5D5D; font-weight:600; text-align:center;}
+.up{ float:left;}
+.down{ float:left;}
+.valuation input{ width:20px; height:12px; float:left; margin:0px 5px;}
+.save{ float:left; margin-left:5px;}
+.stock{ float:left; margin-right:5px;}
+.manufacturer_punct1{width:800px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.manufacturer_punct3{width:100px; height:25px; float:left; color:#5D5D5D; font-weight:600; text-align:center;}
+.header_punct1{ width:800px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.header_punct3{ width:100px; height:25px; float:left; color:#5D5D5D; font-weight:600;}
+
+
+.add_kat{ width:150px; height:18px; text-align:center; color:#5D5D5D; font-weight:600; margin-top:28px; border:1px solid #999999;margin-left:280px; font-size:14px; }
+.add_kat a{ text-decoration:none; color:#5D5D5D;}
+.add_image{ margin-left:28px; float:left;}
+
+p{ margin:0px; padding:0px;}
+#save {background: url(../images/save_16.png) no-repeat;
+border:none;
+height: 22px;
+width: 22px;
+margin:0px;
+padding:0px;
+cursor:pointer;
+}
+.update2{ float:left; margin:50px 0px 0px 160px;}
+.update3{ float:left; margin:50px 0px 0px 350px;}
+.update4{ float:left; margin:20px 0px 0px 315px;}
+.update5{ float:left; text-align:right; margin:40px 0px 0px 95px; }
+
+.plus{ text-align:right;}
+.spisok{ width:400px;  margin:10px 0px 10px 28px;}
+.spisok_type{ width:400px;color:#5D5D5D; font-weight:600;}
+.punct_type{ width:400px; height:20px; margin-top:5px; color:#407FAE;}
+.punct_type a{ color:#407FAE; font-weight:600; font-size:14px; }
+
+.level{ width:200px; margin-left:28px; float:left;}
+.level_text{ width:200px; height:20px;  font-size:14px; height:20px; font-weight:700; color:#6d6d6d; font-family:Verdana; text-shadow: white 1px 1px;}
+.level_text1{ width:200px; font-size:12px; height:20px; font-weight:400; color:#6d6d6d; font-family:Verdana; text-shadow: white 1px 1px;}
+.name_level input{width:200px; height:16px; margin-bottom:10px; }
+.name_level select{width:200px; height:16px; margin-bottom:10px; }
+
+
+
+.zak_punct1{width:50px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.zak_punct2{width:200px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.zak_punct3{width:200px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.zak_punct4{width:330px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+.zak_punct5{width:100px; height:25px; float:left; color:#5D5D5D; font-weight:600; margin-left:5px;}
+/*стили для редактора товаров и категорий */
+.check_items{ 
+   
+    position: fixed;
+    left: 1658px;
+    font-size: 35px;
+    bottom: 720px;
+border:1px solid black;
+padding: 20px;
+background-color: aquamarine;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */}
+.select_items{
+position: fixed;
+    left: 1300px;
+    width: 550px;
+    height: 510px;
+    background-color: #dcf792;
+    bottom: 187px;
+    border:1px solid #a2a2a2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    overflow-y: auto;
+    font-family: sans-serif;
+    padding: 5px 7px;
+}
+.item_id
+{display: inline-block;
+width: 140px;
+}
+.radio{
+width: 50px;
+}
+#add_product
+{position: fixed;
+ left: 1510px;
+    bottom: 95px;
+    padding: 15px 20px;
+    font-size: 30px;
+
+}
+#hide {
+position: fixed;
+    bottom: 740px;
+    left: 1295px;
+}
+#view{
+width: 50px;
+}

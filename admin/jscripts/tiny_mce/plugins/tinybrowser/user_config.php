@@ -1,0 +1,1 @@
+<?php $config['sortType']='Filesize'; $config['view']='plate'; ?>
