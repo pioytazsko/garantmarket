@@ -1,6 +1,9 @@
 *.jpg
 *.png
 *.bmp
+*.gif
+*.jpeg
+*.JPG
 /image/*
 /images/*
 /img/*
