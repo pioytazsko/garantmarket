@@ -1,5 +1,20 @@
 <div class="center">
-<?php include("tpl/left.php");?>	
+<?php include("tpl/left.php");
+    define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+require_once(__ROOT__.'/medoo.min.php');
+require_once(__ROOT__.'/config.php');
+
+$database = new medoo(array(
+	       // required
+            'database_type' => $config_db['database_type'],
+            'database_name'=> $config_db['database_name'],
+            'server_name' => $config_db['server_name'],
+            'username' => $config_db['username'],
+            'password' => $config_db['password'],
+            'charset'=>$config_db['charset']
+        ));
+    
+    ?>	
 		
 	
 <div class="right">
@@ -74,7 +89,24 @@ $vibormanrez=mysql_fetch_array($viborman);
 			?>
 			<div style="clear:both;"></div>
 			
+<div class="cat_my_man">
+    
+    
+    <?php 
+$url=explode('/', $_SERVER['REQUEST_URI']);
+// сделать проверку на 
+
+if ($url[1]==manufactors){
+foreach($arr_man as $val)
+{
+echo '<a href="/item_manufactors/'.$idman.'/'.$val['chpu'].'/'.$val['id'].'"><div class="blokpodkat1"><div class="podkatname">'.$val['name'].'</div><div class="podkatimg"><img src="categoryimages/'.$val['img'].'" alt="'.$val['name'].'" title="'.$val['name'].'"/></div> </div></a>';
+
+
+}}
+
 			
+
+;?></div>		
 			
 <?php
 //находим вложенные категории
@@ -139,7 +171,8 @@ $curs=$curs-$mankursrez['kursman'];
 }
 $view=$vipitemrez['publick'];
 $newname=$vipitemrez['image'];
-$image = end(explode('/', $newname));
+    $end=explode('/', $newname);
+$image = end($end);
 $name=$vipitemrez['name'];
 $price= str_replace(',',' ',number_format($vipitemrez['price']));
 $price2= $vipitemrez['price']*$curs;

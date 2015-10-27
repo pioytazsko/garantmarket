@@ -32,7 +32,7 @@ do
 {
 $viborcatman2=mysql_query("SELECT * FROM catecory WHERE id=$viborcatmanrez[category]");
 $viborcatmanrez2=mysql_fetch_array($viborcatman2);
-
+//print_r($viborcatmanrez2);
 if($viborcatmanrez2['parent']<1)
 {
 $alcatman="".$alcatman."".$viborcatmanrez['category'].", ";
@@ -58,13 +58,18 @@ $alcatman="".$alcatman."5001";
 
 $shopcat=mysql_query("SELECT * FROM catecory WHERE parent=0 and id IN($alcatman) ORDER BY levl");
 $shopcatrez=mysql_fetch_array($shopcat);
+    //создаем массив для использования при формировании подкатегорий
+    $arr_man=array();
 do
 {
+    $arr_man[]=$shopcatrez;
 ?>
 				<li><a href="item_manufactors/<?php echo "$idman"."/"; ?><?php if($shopcatrez['chpu']!='') {echo $shopcatrez['chpu'];} else { echo "element";} echo "/"."$shopcatrez[id]"; ?>"><?php if($shopcatrez['h1']){ echo "$shopcatrez[h1]"; }else{ echo "$shopcatrez[name]"; } ?></a></li><div class="sep"><img src="image/sep_2.png"></div>
 <?php 
 }
 while($shopcatrez=mysql_fetch_array($shopcat));
+//    print_r($arr_man);
+
 ?>
 							
 
