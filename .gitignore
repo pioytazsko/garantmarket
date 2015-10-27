@@ -4,7 +4,4 @@
 *.gif
 *.jpeg
 *.JPG
-/image/*
-/images/*
-/img/*
-/shopimage/*
+
