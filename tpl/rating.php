@@ -1,6 +1,7 @@
  <?php 
-require_once('/medoo.min.php');
-require_once('/config.php');
+define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+require_once(__ROOT__.'/medoo.min.php');
+require_once(__ROOT__.'/config.php');
 
 $database = new medoo(array(
 	       // required

@@ -10,6 +10,7 @@ $database='garantmarket';
 	'password' => '',
     'charset'=>'utf8');
 
+
 // $config_db=array(
 //      'database_type' => 'mysql',
 //    'database_name'=> 'garantma_db',

@@ -1,6 +1,7 @@
 <?php // Include Medoo
-require_once('/medoo.min.php');
-require_once('/config.php');
+define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+require_once(__ROOT__.'/medoo.min.php');
+require_once(__ROOT__.'/config.php');
 
 $database = new medoo(array(
 	       // required
@@ -87,7 +88,7 @@ if((count($var[0])) or (count($var[1]))  )
                     </a>
                 </div>
                 <div class=\"shop_katalog_name b1c-name\" >
-                    <a href=\"catalog/".$cat_chpu[0]['chpu']."/".$items[$i]['chpu']."\">".$name."</a>
+                    <a style='line-height: 1' href=\"catalog/".$cat_chpu[0]['chpu']."/".$items[$i]['chpu']."\">".$name."</a>
                 </div>
                   <div class=\"shop_cena\">";
             if($items[$i]['price']==0){
@@ -129,11 +130,3 @@ echo '</ul>
 </div><a id="next" class="button32" tabindex="0"></a>
 <a id="prev" class="button31" tabindex="0"></a>';
 } 
-
-
-
-
-
-
-
-
