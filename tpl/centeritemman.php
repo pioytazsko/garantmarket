@@ -13,7 +13,37 @@ $database = new medoo(array(
             'password' => $config_db['password'],
             'charset'=>$config_db['charset']
         ));
-    
+
+function get_image($id_cat,$man,$database)
+{ 
+    $datas = $database->select("catalog", array(
+	"image",
+	"id"), array("AND"=>array(
+	"manufekted" => $man,"category"=>$id_cat),"LIMIT"=>1,"ORDER"=>"levl"));
+   
+   if(count($datas)!=0)
+    {
+       return $datas;
+    }
+    else
+    {
+         $get_cat=$database->select("catecory",array('id'),array("parent"=>$id_cat,"ORDER"=>"levl DESC"));
+        if (count($get_cat)!=0)
+        {
+            foreach($get_cat as $value)
+            {
+              $res=get_image($value["id"],$man,$database);
+             if(count($res)!=0)
+             {
+             return $res;
+             }
+            }
+ 
+        }
+        
+    }
+ 
+}    
     ?>	
 		
 	
@@ -92,21 +122,39 @@ $vibormanrez=mysql_fetch_array($viborman);
 <div class="cat_my_man">
     
     
-    <?php 
+    <?php
+
+//print_r($datas);
+
+
 $url=explode('/', $_SERVER['REQUEST_URI']);
 // сделать проверку на 
 
-if ($url[1]==manufactors){
+if ($url[1]=='manufactors'){
 foreach($arr_man as $val)
 {
-echo '<a href="/item_manufactors/'.$idman.'/'.$val['chpu'].'/'.$val['id'].'"><div class="blokpodkat1"><div class="podkatname">'.$val['name'].'</div><div class="podkatimg"><img src="categoryimages/'.$val['img'].'" alt="'.$val['name'].'" title="'.$val['name'].'"/></div> </div></a>';
+//    $datas = $database->select("catalog", array(
+//	"image",
+//	"id"
+//), array("AND"=>array(
+//	"manufekted" => $idman,"category"=>$val['id']),"LIMIT"=>1,"ORDER"=>"levl"
+//         
+//));
+    $res=0;
+$data=get_image($val['id'],$idman,$database);
+    if(count($data)!=0){
+foreach ($data as $value){ if ($value['image']!=0){$res=$value['image'];break;}; }};
+   
+//    print_r($data);
+echo '<div class="blokpodkat1"><a href="/item_manufactors/'.$idman.'/'.$val['chpu'].'/'.$val['id'].'"><div class="podkatname">'.$val['name'].'</div><div class="podkatimg"><img src="shopimage/'.$res.'" alt="'.$val['name'].'" title="'.$val['name'].'"/></div> </a></div>';
 
 
 }}
 
 			
 
-;?></div>		
+;?>
+    </div>		
 			
 <?php
 //находим вложенные категории
