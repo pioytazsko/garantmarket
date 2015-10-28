@@ -109,7 +109,18 @@ $vibormanrez=mysql_fetch_array($viborman);
 			?>
 <div class="blokpodkat"><a href="item_man.php?id_cat=<?php echo "$parcatres[id]"; ?>&idman=<?php echo "$idman"; ?>" title="<?php echo "$parcatres[name]"; ?>" >
 				<div class="podkatname"><?php echo "$parcatres[name]"; ?></div>
-				<div class="podkatimg"><img src="categoryimages/<?php echo "$parcatres[img]"; ?>" alt="<?php echo "$parcatres[name]"; ?>" title="<?php echo "$parcatres[name]"; ?>" /></div>
+				<div class="podkatimg"><img src="shopimage/<?php
+                   $res=0;
+$data_pod=get_image($parcatres['id'],$idman,$database);
+    if(count($data_pod)!=0){
+foreach ($data_pod as $value){ if ($value['image']!=0){$res=$value['image'];break;}; }};  echo $res;
+                    
+                    
+                    
+                    
+                    
+                    
+                    ?>" alt="<?php echo "$parcatres[name]"; ?>" title="<?php echo "$parcatres[name]"; ?>" /></div>
 			</a></div>
 			<?php 
 			}
@@ -133,13 +144,6 @@ $url=explode('/', $_SERVER['REQUEST_URI']);
 if ($url[1]=='manufactors'){
 foreach($arr_man as $val)
 {
-//    $datas = $database->select("catalog", array(
-//	"image",
-//	"id"
-//), array("AND"=>array(
-//	"manufekted" => $idman,"category"=>$val['id']),"LIMIT"=>1,"ORDER"=>"levl"
-//         
-//));
     $res=0;
 $data=get_image($val['id'],$idman,$database);
     if(count($data)!=0){
