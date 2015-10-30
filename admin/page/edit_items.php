@@ -237,8 +237,18 @@ overflow-y: auto;overflow-x:hidden;margin:0 0 40px 0; cursor:pointer" >
  }
  };?>
     </div><div style="float: right;margin-bottom: 100px;" >
-    <input type="button"  id="add_product" value="Сохранить изменения"></div>
-      <div class="check_items" id="num_of_cheked">Выбрано:0</div>    
+    <input type="button"  id="add_product" value="Сохранить изменения">
+<div style="position: fixed;
+left: 1400px;
+bottom: 728px;
+padding: 15px 20px;
+font-size: 20px;"><input type="radio" checked class="select" name="select" value="0">Слайдер
+<input type="radio" name="select" class="select" value="1">Комплект</div>
+
+
+</div>
+      <div class="check_items" id="num_of_cheked">Выбрано:0</div>   
+
 <div class="select_items">
       
         </div>

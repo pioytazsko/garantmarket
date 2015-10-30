@@ -20,22 +20,22 @@ function get_image($id_cat,$man,$database)
 	"image",
 	"id"), array("AND"=>array(
 	"manufekted" => $man,"category"=>$id_cat),"LIMIT"=>1,"ORDER"=>"levl"));
-   
+   //роверка на содержание массива, если есть результат. то берем картинку оттуда
    if(count($datas)!=0)
     {
        return $datas;
     }
-    else
+    else //если нет -то берем подкатегории..
     {
          $get_cat=$database->select("catecory",array('id'),array("parent"=>$id_cat,"ORDER"=>"levl DESC"));
-        if (count($get_cat)!=0)
+        if (count($get_cat)!=0) //если есть подкатегории , то  проходим по ним и смотрим в них картинки (рекурсивно)
         {
             foreach($get_cat as $value)
             {
               $res=get_image($value["id"],$man,$database);
-             if(count($res)!=0)
+             if(count($res)!=0) 
              {
-             return $res;
+             return $res;// если картинки найдены..выводим результат
              }
             }
  
@@ -50,6 +50,7 @@ function get_image($id_cat,$man,$database)
 <div class="right">
 
 	<?php
+
 $viborman=mysql_query("SELECT * FROM manufekted WHERE id=$idman");
 $vibormanrez=mysql_fetch_array($viborman);
 ?>

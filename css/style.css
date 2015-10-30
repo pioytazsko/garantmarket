@@ -1,8 +1,10 @@
 body{ width:100%; margin:0px; padding:0px; background:url(../image/base_bg.jpg) no-repeat; font-family:arial;}
-iframe{height: 0;}
+iframe{
+    height: 0;
+}
 #content{ width:1000px; margin:0px auto;}
 p{margin:0px; padding:0px;}
-
+p iframe{height: 315px;}
 
 
 .top{ width:1000px; margin:0px auto 0px auto; height:40px;}

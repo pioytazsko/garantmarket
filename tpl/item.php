@@ -217,7 +217,7 @@ echo "</ul>";
 				<div style="clear:both"></div>						
 			</div>
 			
-			<?php 
+			<?php  include('complect.php');
 			$paramsitem=mysql_query("SELECT * FROM paramsitem WHERE iditem=$id");
 				$paramsitemrez=mysql_fetch_array($paramsitem);
 				if($paramsitemrez>0)
@@ -250,7 +250,7 @@ echo "</ul>";
 				</div>	
 				
 		<?php 
-		}
+		};
 		?>		
 		<div class="shop_opisanie">
             <?php if ($itemrez[deskripshn]==''){} else{

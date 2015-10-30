@@ -14,9 +14,9 @@
     $('input:checkbox+span').click(function() {
         $(this).prev().trigger('click');
         $('#num_of_cheked').html('Выбрано:' + $('input:checked').length);
-        var checked_span = $('input:checked').next().toArray();
+        var checked_span = $('.subcategory input:checked').next().toArray();
 
-        var checked = $('input:checked').toArray();
+        var checked = $('.subcategory input:checked').toArray();
         var items = '';
         for (var i = 0; i < checked.length; ++i) {
             items = items + '<input type="text" class="sort" value="' + i + '" data=' + checked[i].value + ' size="3" style="margin-right:13px"><div class="they_buy_items"  style="border-bottom:1px solid grey;padding:10px; "data=' + checked[i].value + ' >' + checked_span[i].innerHTML + '</div>';
@@ -43,10 +43,10 @@
     x = Array();
     $('input:checkbox').click(function() {
 
-        $('#num_of_cheked').html('Выбрано:' + $('input:checked').length);
-        var checked_span = $('input:checked').next().toArray();
+        $('#num_of_cheked').html('Выбрано:' + $('.subcategory input:checked').length);
+        var checked_span = $('.subcategory input:checked').next().toArray();
 
-        var checked = $('input:checked').toArray();
+        var checked = $('.subcategory input:checked').toArray();
         var items = '';
         for (var i = 0; i < checked.length; ++i) {
             items = items + '<input type="text" class="sort" data=' + checked[i].value + ' value=' + i + ' size="3"style="margin-right:13px"><div class="they_buy_items"  style="border-bottom:1px solid grey;padding:10px; "data=' + checked[i].value + ' >' + checked_span[i].innerHTML + '</div>';
@@ -61,7 +61,7 @@
             $(this).prev().remove();
             $(this).remove();
 
-            $('#num_of_cheked').html('Выбрано:' + $('input:checked').length);
+            $('#num_of_cheked').html('Выбрано:' + $('.subcategory input:checked').length);
 
 
 
@@ -98,8 +98,9 @@
             console.log(sort_object[i].value + '--->>>>');
             check.push(sort_object[i].value)
         }
-
-
+// применим значения скидок в % из текстовых инпутов
+     select=$('.select').toArray();
+       if (select[0].checked){
         //ajax 
         $.ajax({
             type: "POST",
@@ -113,10 +114,48 @@
                 alert('Изменения внесены!!!')
             }
 
+        });} else 
+           
+        
+        { 
+             checkedbox=$('.they_buy_items').toArray();
+             
+            var temp=check[0];
+            check=[];
+            check.push(temp);
+            for(var p in checkedbox)
+                {
+            check.push(checkedbox[p].attributes.data.value);
+            }
+            
+            check=check.slice(0,4);console.log(check);
+         var proc=$('input.sort').toArray();
+         proc=proc.slice(0,3);
+         for(p in proc)
+         {
+         check.push(proc[p].value);
+         };
+        console.log(check);
+          $.ajax({
+            type: "POST",
+            url: "/admin/controller/add_complect.php",
+            data: {
+                id: JSON.stringify(check)
+            },
+            cache: false,
+            success: function(data) {
+                console.log(data);
+                alert('Изменения внесены!!!')
+            }
+
         })
+        
+        }
 
 
 
     });
+$('[value=1].select').click(function(){})
     $('input:text').unbind();
 $('#hide').click(function(){$('#num_of_cheked,.select_items,#add_product').slideToggle(1000)})
+$('[value=1].select').click(function(){});
