@@ -8,10 +8,7 @@ if($_GET['id']!='')
 }
 else {
     require_once ("tpl/center_catalog.php");
+
 }
-
-
-
-
 require_once ("tpl/bottom.php");
 ?>
