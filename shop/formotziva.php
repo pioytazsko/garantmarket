@@ -8,5 +8,5 @@
 <div class="nameotziv">2+2= ?</div>
 <div class="otzivform"><input name="cod" type="text"></div>
 <input name="iditem" type="hidden" value="<?php echo $id; ?>">
-<input name="submit"class="send_query" type="submit"></form>
+<input name="submit" class="send_query" type="submit"></form>
 

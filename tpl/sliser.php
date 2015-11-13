@@ -96,7 +96,7 @@ if((count($var[0])) or (count($var[1]))  )
                         </span>
                     </span>
                 <div>
-                <button style='background:#8D918D' class=\"b1c\">ПОД ЗАКАЗ</button></div>
+                <button style='background:#8D918D' class=\"b1c\" value='".$items[$i]['id']."'>ПОД ЗАКАЗ</button></div>
                 </div> 
                 
             </div>" ; 
@@ -107,7 +107,7 @@ if((count($var[0])) or (count($var[1]))  )
                         </span>
                     </span>
                 <div>
-                <button class=\"b1c\">КУПИТЬ</button></div>
+                <button class=\"b1c\" value='".$items[$i]['id']."'>КУПИТЬ</button></div>
                 </div> 
                 
             </div>"; 

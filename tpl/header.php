@@ -1,12 +1,19 @@
 <?php include("db.php");?>
-<?php include("title.php") ?>
+<?php include("title.php"); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="ru">
 <head>
+<title><?php echo $title; ?></title> 
 <base href="http://<?=$_SERVER['HTTP_HOST'];?>">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<meta name="description" content="<?php echo $kewdesk; ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="ru" />
 
- <link href="css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" >
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <link rel="stylesheet" type="text/css" href="/css/lightbox.css">
 <link rel="stylesheet" type="text/css" href="/css/news_style.css">
@@ -14,14 +21,7 @@
 <link rel="stylesheet" type="text/css" href="/css/craftyslide.css">
 <link rel="stylesheet" type="text/css" href="/css/ui.totop.css">
 <link rel="stylesheet" type="text/css" href="/css/all.css">
-
-  
-        <link href="css/menu.css" rel="stylesheet">   
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<meta name="keywords" content="<?php echo $keywords; ?>" />
-<meta name="description" content="<?php echo $kewdesk; ?>" />
-<title><?php echo $title; ?></title> 
+<link rel="stylesheet" type="text/css" href="/css/menu.css" >   
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-39713687-1']);
@@ -73,7 +73,7 @@ setTimeout('if (window._gaq != undefined) _gaq.push([\'_trackEvent\', \'NoBounce
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
 
 </head>
 <body>

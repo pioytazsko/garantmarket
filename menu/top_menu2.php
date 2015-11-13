@@ -101,7 +101,7 @@ $newsCatChpu=mysql_fetch_array($query);
 
 ?>
 <div class="top_punct"><a href="<?php echo $menulink?>"><?php echo "$rezmenu[name]"; ?></a></div>
-<div class="razdel2"><img src="image/sep2.png"></div>
+<div class="razdel2"><img src="image/sep2.png" alt=""></div>
 
 <?php
 

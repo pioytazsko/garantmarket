@@ -71,7 +71,7 @@ $infocatrez=mysql_fetch_array($infocat);
 					if($vipitemrez['share']){
 				?>
 				<div style="position: absolute;right: 8px;bottom: -25px;">
-				<img src="image/act_krug.png" style="width: 50px; height: 50px;padding:0 7px 30px 0px;"/>
+				<img src="image/act_krug.png" style="width: 50px; height: 50px;padding:0 7px 30px 0px;" alt=""/>
 				</div>
 				<?php } ?>
 				<img src="shopimage/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" />
@@ -112,7 +112,7 @@ $infocatrez=mysql_fetch_array($infocat);
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
+					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c order" value="<?php echo $vipitemrez['id']; ?>" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div><?php } else{ ?>
 				
 <div class="cena">
@@ -120,7 +120,7 @@ $infocatrez=mysql_fetch_array($infocat);
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
+					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" value="<?php echo $vipitemrez['id']; ?>" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
 				</div>
 <?php }?>
 

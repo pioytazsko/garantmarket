@@ -124,7 +124,7 @@ $.fn.preload = function() {
 							<div class="shop_buy2"><?php // echo "$price2 $val2"; ?></div>
 							<div class="shop_buy3"></div>
 						</div>
-						<div style="height:100px"><button class="b1c">КУПИТЬ</button></div>
+						<div style="height:100px"><button value="<?php echo $itemrez['id']; ?>" class="b1c">КУПИТЬ</button></div>
 				
 				<?php } 
 			     else
@@ -138,7 +138,7 @@ $.fn.preload = function() {
 			<div class="shop_buy3"></div>
 		</div>
 		<div style="font-size: 11px;float:left;color:#333;margin-right: 8px;">*При заказе товара уточняйте цену у менеджера.</div>
-		<div class="bno" style="height:100px"><button class="b1c">ПОД ЗАКАЗ</button></div>
+		<div class="bno" style="height:100px"><button value="<?php echo $itemrez['id']; ?>" class="b1c order">ПОД ЗАКАЗ</button></div>
 
 
 				<?php }?>
@@ -160,14 +160,14 @@ echo "<ul><li>";
 ?>
 
 <?php
-echo "<img src='shopimage/$image' /></li>";
+echo "<img src='shopimage/$image' / alt=''></li>";
 do
 {
 echo "<li>";
 ?>
 <a href="shopimage/<?php echo "$dopimgrez[image]"; ?>" rel="lightbox[plants]">
 <?php
-echo"<img src='shopimage/$dopimgrez[image]'/></a></li>";
+echo"<img src='shopimage/$dopimgrez[image]' alt=''/></a></li>";
 }
 while($dopimgrez=mysql_fetch_array($dopimg));
 echo "</ul>";
@@ -237,7 +237,7 @@ echo "</ul>";
 				{
 				if($paramsitemrez['val']){
 				?>
-				<div class="shop_button5"><div class="shop_buttonim"><img src="icon/<?php echo "$paramsitemrez2[image]"; ?>" /></div><div class="shop_buttonval"><strong><?php echo "$paramsitemrez2[name]"; ?></strong> : <span style="  color: #2DACDD;
+				<div class="shop_button5"><div class="shop_buttonim"><img src="icon/<?php echo "$paramsitemrez2[image]"; ?>" alt=""/></div><div class="shop_buttonval"><strong><?php echo "$paramsitemrez2[name]"; ?></strong> : <span style="  color: #2DACDD;
   padding-left: 5px;
   /* font-weight: bold; */
   font-size: 16px;"><?php echo "$paramsitemrez[val]"; ?></span></div></div>
@@ -293,7 +293,7 @@ echo "</ul>";
 
 				<div class="shop_tovar2 b1c-good">
 					
-					<div style="height: 143px;"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><div class="shop_tovar_kart"><img src="shopimage/<?php echo "$image4"; ?>" /></div></a></div>
+					<div style="height: 143px;"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><div class="shop_tovar_kart"><img src="shopimage/<?php echo "$image4"; ?>" alt=""/></div></a></div>
 
 					<div class="shop_katalog_name b1c-name"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><?php echo "$itemrez4[name]"; ?></a></div>
 					
@@ -301,12 +301,12 @@ echo "</ul>";
 				<?php 
 			     if($itemrez4[price]==0) 
 				{?>
-							<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php  echo "$itemrez4[price] $val1"; ?></span></span><div class="b1c-sm"><button class="b1c">ПОД ЗАКАЗ</button></div></div>
+							<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php  echo "$itemrez4[price] $val1"; ?></span></span><div class="b1c-sm"><button class="b1c" value="<?php echo $itemrez4['id'];?>">ПОД ЗАКАЗ</button></div></div>
 				
 <?php } 
 			     else
 				{?>
-	<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php $cena=number_format($itemrez4['price'],0,'',' '); echo $cena.' '.$val1; ?></span></span><div><button class="b1c">КУПИТЬ</button></div></div>
+	<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php $cena=number_format($itemrez4['price'],0,'',' '); echo $cena.' '.$val1; ?></span></span><div><button class="b1c" value="<?php echo $itemrez4['id'];?>">КУПИТЬ</button></div></div>
 <?php } ?>
 				</div>
 

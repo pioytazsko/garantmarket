@@ -242,7 +242,7 @@ overflow-y: auto;overflow-x:hidden;margin:0 0 40px 0; cursor:pointer" >
 left: 1400px;
 bottom: 728px;
 padding: 15px 20px;
-font-size: 20px;"><input type="radio" checked class="select" name="select" value="0">Слайдер
+font-size: 20px;"><input type="radio"  class="select" name="select" value="0">Слайдер
 <input type="radio" name="select" class="select" value="1">Комплект</div>
 
 

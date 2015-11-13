@@ -6,7 +6,7 @@
 		<div class="search">
 			
 		<form action="/search.php" style=" margin:0px; padding:0px" method="post" id="search-from">
-                    <td width=100%>
+                    
                         <div class="live-search-wrap">
                             <div class="live-search-filed">
                                 <input type="text" class="search-field" id="search-keyword" name="keyword" placeholder="Введите текст" autocomplete="off">
@@ -16,7 +16,7 @@
                             <div class="live-search-result" id="search-block">
                             </div>
                         </div>
-                    </td>
+                   
                     </form>
 		</div>
 	</div>
@@ -25,9 +25,9 @@
 	<div class="head">
 		<div class="head_top">
 			<a href="index.php"><div style="height:85px;width:220px;float:left"></div></a>
-			<div class="razdel"><img src="image/sep.png"></div>
+			<div class="razdel"><img src="image/sep.png" alt=""></div>
 			<div class="head_text"><div class="top1"><?php include("moduls/user1.php");?></div></div>
-			<div class="razdel"><img src="image/sep.png"></div>
+			<div class="razdel"><img src="image/sep.png" alt=""></div>
 			<div  id="telephone" class="head_text"><?php include("moduls/user2.php");?></div>
 		</div>
         

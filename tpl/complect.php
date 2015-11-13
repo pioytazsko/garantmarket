@@ -28,7 +28,7 @@ $datas_complect=$database->select("catalog",array("id","image","name","price","c
                                                     $complect[0]['item_2'],
                                                     $complect[0]['item_3']))); 
 if(count($datas_complect)!=0){
-echo "<div class=\"complect\"><div><h4>В наборе дешевле</h4></div>
+echo "<div class='shop_header' ><div class='shop_opismm'>В наборе дешевле</div></div><div class=\"complect\">
 <div class=\"main_item\">
 <div class='image_complect'><img src=\"/shopimage/".$datas[0]['image']."\" alt=\"\"></div>
 <div class='item_name'>".$datas[0]['name']."</div>
@@ -66,12 +66,12 @@ echo "<div class='plus'>=</div><div class=\"right_complect\"><span id='general_p
 echo "</div>";
 echo "<div class='form_buy'></div><div class='zakaz'><div class='opisanie_zakaza'></div>
 <form method='post' action='order.php'>
-    <div class='form_name'><input type='text'name='name' placeholder='Ваше имя*'></div>
-    <div class='form_name'><input type='text'size=60 id='phone' name='phone' placeholder='Телефон*'></div>
-    <div class='form_name'><input type='text'size=60 name='adress' placeholder='Адрес доставки*'></div> 
-    <div class='form_name'><input type='text'size=50 name='note' placeholder='Примечание'></div> 
-    <div class='form_name_button_cancel'><input type='button'id='cancel_order' value='Отмена' ></div> 
-    <div class='form_name_button'><input type='button'name='ok' id='confirm_order' value='Заказать'></div> 
+    <div class='form_name'><input type='text' name='name' placeholder='Ваше имя*' ></div>
+    <div class='form_name'><input type='text' size=60 id='phone' name='phone' placeholder='Телефон*' ></div>
+    <div class='form_name'><input type='text' size=60 name='adress' placeholder='Адрес доставки*' ></div> 
+    <div class='form_name'><input type='text' size=50 name='note' placeholder='Примечание' ></div> 
+    <div class='form_name_button_cancel'><input type='button' id='cancel_order' value='Отмена' ></div> 
+    <div class='form_name_button'><input type='button' name='ok' id='confirm_order' value='Заказать'></div> 
 </form></div>";};
 
 ?>

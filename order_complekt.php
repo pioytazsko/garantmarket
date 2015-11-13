@@ -2,7 +2,7 @@
 define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
 require_once(__ROOT__.'/medoo.min.php');
 require_once(__ROOT__.'/config.php');
-
+require(__ROOT__.'/send_email.php');
 $database = new medoo(array(
 	       // required
             'database_type' => $config_db['database_type'],
@@ -40,7 +40,10 @@ switch (count($s->complect->items_whith_discount))
                                                             "total_discount"=>$s->complect->economy,
                                                             "final_price"=>$s->complect->client_summ,
                                                             "url"=>$s->url                                       
-                                                           ));break;
+                                                           ));
+     
+    
+    ;break;
  case 2:$insert_order = $database->insert("basket", array("id_main_item"=>$s->complect->id_main_item,
                                                       "name_main_item"=>$s->complect->name_main_item,
                                                       "cost_main_item"=>$s->complect->main_item_cost,
@@ -91,7 +94,36 @@ switch (count($s->complect->items_whith_discount))
                                                            ));   break;
  default:break;
 };
-    
-//if(mail ( string $to , string $subject , string $message [, string $additional_headers [, string $additional_parameters ]] )){echo 'ok';}else {echo error;}
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=windows-1251' . "\r\n";  
+$subject="Заказ комплекта товаров";
+$message="<br>В комплекте:</br>".
+        $s->complect->name_main_item.'<br><b>'.
+        number_format($s->complect->main_item_cost,0,'.',' ').' руб.</b></br>';
+$arr_items=$s->complect->items_whith_discount;
+$items='';
+foreach($arr_items as $val){
+    $items=$items.'<br> К нему:'.$val->name.''.
+     '<b>'.number_format($val->price,0,'.',' ').' руб.</b>'.
+     '-скидка:'.$val->discount.'%</br>';
 
-print_r($s); ?>
+}
+  $message=$message.$items.
+      '<br>от '.$s->name.
+      ' , телефон:'.$s->phone.
+      ' , адрес:'.$s->adress.
+      ' , примечание: '.$s->note.
+      '</br><br>Цена без скидки: '.number_format($s->complect->order_price,0,'.',' ').
+      ' руб. Скидка: '.number_format((int)$s->complect->economy,0,'',' ').
+      ' руб. Цена со скидкой: '.number_format($s->complect->client_summ,0,'',' ').
+      
+      ' руб.</br><br>Ссылка на товар:<a href="'.$s->url.'">'.$s->complect->name_main_item.'</a></br>'
+      ;
+
+    
+    
+    foreach ($send_email as $val){ 
+if(mail ( $val,  $subject ,  $message,$headers )){echo 'ok';}else {echo error;}
+    }
+
+print_r($message); ?>

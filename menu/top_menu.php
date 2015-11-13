@@ -23,7 +23,7 @@ $resultat []=$resulr;
                         </li>
                                             
                         <li class="main_li">
-                            <a class="dropdown-toggle pull-left menu_catalog " id='menu_catalog' data-toggle="dropdown" href="/cataloge.php"> &#9662 Каталог</a>
+                            <a class="dropdown-toggle pull-left menu_catalog " id='menu_catalog' data-toggle="dropdown" href="/cataloge.php"> &#9662; Каталог</a>
                             <ul class="dropdown-menu" role="menu">
                                 <?php foreach($resultat as $key=>$values ){ 
                     $query_parent="SELECT id,name,chpu,specification FROM catecory WHERE parent='".$values['id']."' ORDER BY levl";
@@ -40,25 +40,23 @@ $resultat []=$resulr;
                     
                    
                     if($n<9){ echo'<div class="padding">
-                                <h4>'.$values['name'].'</h4><ul><img  class="img_category"src="categoryimages/'.$values['menu_img'].'">';
+                                <h4>'.$values['name'].'</h4><img  class="img_category" src="categoryimages/'.$values['menu_img'].' " alt=""><ul>';
                                 foreach($result_subcategory as $key=>$valuess){    
-                                                    echo '<li><a href="/catalog/'.$valuess['chpu'].'/">'.$valuess['name'].'</a></li>
-                                                    <span>'.$valuess['specification'].'</span>';
+                                                    echo '<li><a href="/catalog/'.$valuess['chpu'].'/">'.$valuess['name'].'</a><span>'.$valuess['specification'].'</span></li>';
                                                     }
                                 echo  '</ul></div></div></li>';
                                 ;}
                     else{ 
                         foreach($result_subcategory as $key=>$valuess){ //echo $key;
                                                 if($key==0){ echo'<div class="pull-left padding row_left">
-                                                            <h4>'.$values['name'].'</h4><ul><img  class="img_category"src="categoryimages/'.$values['menu_img'].'">';
+                                                            <h4>'.$values['name'].'</h4><img  class="img_category"  src="categoryimages/'.$values['menu_img'].'" alt=""><ul>';
                                                             };
                                                     echo'<li><a href="/catalog/'.$valuess['chpu'].'/">'.
-                                                    $valuess['name'].'</a></li>
-                                                    <span>'.$valuess['specification'].'</span>';
+                                                    $valuess['name'].'</a><span>'.$valuess['specification'].'</span></li>';
                                                 if($key==8){
                                                             echo'</ul></div>
                                                             <div class="pull-right padding row_right">
-                                                            <br></br>
+                                                            <br>
                                                             <ul>'
                                                             ;}
                             if($key==16){
@@ -99,17 +97,18 @@ $resultat []=$resulr;
                          <li class="main_li">
                             <a class="dropdown-toggle pull-left" data-toggle="dropdown" href="/faq.php">Вопрос/ответ</a>
                         </li>
+                        <li class="main_li basket">
+                          <a class="basket" data-toggle="dropdown" href="/faq.php"><div class='basket_image'><img src="/icon/basket.png" alt=""><span class="
+number_of_goods">0</span></div> Корзина</a>
+                        </li>
                     </ul>
-
-
-
                 </div>
             </div>
         </div>
 
 
 
-        <script src="/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
         <script src="/js/jquery.menu-aim.js" type="text/javascript"></script>
         <script src="/js/bootstrap.min.js" type="text/javascript"></script>
         <script>

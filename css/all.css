@@ -454,13 +454,13 @@ a.button32:hover:before {
     vertical-align: sub;
 }
 .complect {
-    width: 98%;
-    height: 300px;
+    width: 100%;
+    height: 280px;
     border: 0px solid black;
     border-radius: 10px;
-    margin: 80px 0;
+    /*    margin: 80px 0;*/
     box-shadow: 0 0 3px grey;
-    padding: 0 10px;
+    padding: 0 1px;
 }
 .complect span {
     font-family: sans-serif;
@@ -483,7 +483,7 @@ a.button32:hover:before {
     /*border: 1px solid black;*/
     border-radius: 5px;
     float: right;
-    height: 87%;
+    height: 100%;
     background-color: #EBEBEB;
     box-shadow: 0 0 5px grey;
     width: 130px;
@@ -495,14 +495,12 @@ a.button32:hover:before {
     margin: 5px 2px 0 10px;
 }
 .item_name {
-    height: 70px;
+    height: 55px;
 }
-.item_name + span
-{
+.item_name + span {
     display: block;
-margin: 5px 0;
+    margin: 10px 0;
 }
-
 .main_item {
     margin: 18px 0px 5px 10px;
     float: left;
@@ -517,6 +515,7 @@ margin: 5px 0;
 .image_complect {
     width: 150px;
     height: auto;
+    margin: 0 0 10px 0;
 }
 .image_complect img {
     height: 150px;
@@ -548,7 +547,7 @@ margin: 5px 0;
 .zakaz {
     display: none;
     position: fixed;
-    margin:-275px 0 0 -250px;
+    margin: -275px 0 0 -250px;
     top: 50%;
     left: 50%;
     width: 500px;
@@ -559,51 +558,217 @@ margin: 5px 0;
     border-radius: 7px;
     box-shadow: 0 0 5px #ffffff;
 }
-.form_name
-{
-margin: 25px 20px;
-/*float: left;*/
+.form_name {
+    margin: 25px 20px;
+    /*float: left;*/
     clear: left;
-    
 }
-.form_name_button{
-     position: absolute;
+.form_name_button {
+    position: absolute;
     right: 20px;
     bottom: 10px;
-/*float: right;*/
-clear: right;
-
-    
+    /*float: right;*/
+    clear: right;
 }
-.form_name_button input
-{  background-color: #15db15;
- padding: 10px 15px;
-     color: white;
+.form_name_button input {
+    background-color: #15db15;
+    padding: 10px 15px;
+    color: white;
     font-size: 1.4em;
     border-radius: 9px;
 }
-
-.form_name_button_cancel{
-   
-     position: absolute;
+.form_name_button_cancel {
+    position: absolute;
     left: 20px;
     bottom: 10px;
-/*float: left;*/
-clear: right;
-/*    margin:10px 20px;*/
+    /*float: left;*/
+    clear: right;
+    /*    margin:10px 20px;*/
 }
-.form_name_button_cancel input{
-     background-color: #ffffff;
+.form_name_button_cancel input {
+    background-color: #ffffff;
     color: #000000;
     font-size: 1.1em;
-padding: 5px 10px;
-     border-radius: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-.opisanie_zakaza{
+.opisanie_zakaza {
     color: #fff;
-margin:  10px 20px;
+    margin: 10px 20px;
     float: left;
     clear: right;
+}
+.basket {
+    float: right !important;
+    font-weight: bold;
+}
+.basket_image {
+    width: 60px;
+    height: 17px;
+    float: left;
+}
+.number_of_goods {
+    /*float: left;*/
+    margin: 0 10px;
+}
+.basket_image img {
+    max-height: 20px;
+    max-width: 20px;
+}
+.form_buy_basket {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 200;
+}
+.zakaz_basket {
+    display: none;
+    position: fixed;
+    margin: -350px 0 0 -450px;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 700px;
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 300;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #ffffff;
+}
+.basket_name {
+    width: 100%;
+    height: 30px;
+    background-color: #007CBF;
+    border-radius: 7px 7px 0 0;
+    color: #ffffff;
+}
+.basket_name span {
+    font: italic 1.5em sans-serif;
+    margin: 2px 0 2px 20px;
+}
+.basket_consist {
+    overflow-y: scroll;
+    width: 80%;
+    height: 60%;
+    margin: 20px 10px 20px 10px;
+    float: left;
+}
+.basket_items {
+    height: 20px;
+    background-color: #dedede;
+    font: normal 1em sans-serif;
+    padding: 0 0 0 20px;
+}
+.basket_items span{
+}
+.basket_item_price {
+    float: right;
+    font: italic 1.1em sans-serif;
+    margin: 30px;
+    text-align: right;
+}
+.basket_line_items {
+    margin: 10px 20px 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+}
+.basket_links{
+float: left;
+margin: 25px 0 0 0;
+font: bold 1.5em sans-serif;
+text-decoration: none;
+    color:darkgrey;
+    
+}
+.delete_item_basket{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+float: right;
+    margin: 26px 20px 30px 0;
+    color:grey;
+    font: normal 1.5em sans-serif;
+    cursor: pointer;
+}
+.basket_links a {
+text-decoration: none;
+color: darkgray;
+}
+.basket_description {
+    width: 100%;
+    height: 80px;
+}
+.basket_image_item {
+    width: 75px;
+    margin: 1px 20px;
+    height: 75px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+}
+.basket_image_item img {
+    max-height: 75px;
+    max-width: 75px;
+}
+.basket_cart {
+    float: right;
+    width: 15%;
+    height: 30%;
+
+    margin: 20px 20px 0 0;
+    border-radius: 5px;
+}
+.basket_total_summ {
+    color:dimgrey;
+    margin: 20px auto;
+    text-align: center;
+    /*    font:normal small-caps 12px/14px fantasy;*/
+    font-family: "Helvetica Neue", "Helvetica", "Verdana", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.basket_buttons div{
+    height: 35px;
+    width: 175px;
+
+display: block;
+
+float: right;
+clear: right;
+text-align: left;
+    margin-bottom: 10px;
+}
+.basket_buttons span{
+border: 1px solid grey;
+/*    box-shadow: 0 0 1px black;*/
+border-radius: 7px;
+margin: 5px;
+    padding: 7px;
+    display: inline-block;
+background-color: #9b9b9b;
+    color: white;
+    cursor: pointer;
+}
+
+.basket_buttons input{
+float: left;
+    margin: 3px 5px 10px 50px;;
+    clear:left;
+width: 350px;
+}
+.complect_name {
+    padding: 10px 45px;
+    font: bold italic 175% sans-serif;
+    /*    background-color: azure;*/
+    /*    border: 1px solid grey;*/
+    /*    border-radius: 5px 5px 0 0;*/
+    margin: 0 0 -5px;
+    /*    z-index: -10;*/
 }
 #primary_nav_wrap {
     margin-top: 15px
@@ -664,7 +829,7 @@ margin:  10px 20px;
     color: dimgrey;
     font-weight: bold;
     border-radius: 3px;
-    margin: 5px 2px 2px 10px;
+    margin: 15px 2px 2px 10px;
 }
 #econom {
     color: #d02727;

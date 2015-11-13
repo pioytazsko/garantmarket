@@ -38,11 +38,11 @@ $desc=$desc." ...";
 		<div class="n_news_top"><div class="n_telephone"><?php echo "$newsrez[name]"; ?></div></div>
 		<div class="n_header">
 			<div class="n_header_blok">
-				<div class="n_window"><img src="image/kalk.png" /></div>
+				<div class="n_window"><img src="image/kalk.png" / alt=""></div>
 				<div class="n_header_date"><?php echo "$newsrez[date]"; ?></div>
 			</div>
 			<div class="n_header_blok">
-				<div class="n_window"><img src="image/fail.png" /></div>
+				<div class="n_window"><img src="image/fail.png" / alt=""></div>
 				<div class="n_header_date"><a href="<?php echo "newscat/$newschpu/$idcat"; ?>"><?php echo "$catnewsrez[name]"; ?></a></div>
 			</div>
 			

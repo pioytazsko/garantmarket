@@ -6,6 +6,7 @@
 		<?php include("moduls/user5.php"); ?>
 	</div>
 </div>
+<?php include('./tpl/basket.php');?>
 <script type="text/javascript" charset="utf-8" src="/callme/js/callme.js"></script>
 
 <!-- jquery -->
@@ -33,7 +34,6 @@ $().UItoTop({ easingType: 'easeOutQuart' });
   ga('send', 'pageview');
 
 </script>
-
 <script src="js/myskripts.js"></script>
 <script src="js/myskripts3.js"></script>
 <script src="js/craftyslide.js"></script>

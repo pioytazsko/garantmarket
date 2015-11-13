@@ -1,9 +1,6 @@
-
-<body>
-
 	<input class="radio" checked type=radio name=respond id=desktop />
-	<input class="radio"type=radio name=respond id=tablet />
-	<input class="radio"type=radio name=respond id=mobile />
+	<input class="radio" type=radio name=respond id=tablet />
+	<input class="radio" type=radio name=respond id=mobile />
 	<article id=slider>
 		
 
@@ -14,7 +11,7 @@
 	
 		<input checked type=radio class="radio" name=slider id=slide1 />
 		<input class="radio" type=radio name=slider id=slide2 />
-		<input class="radio"type=radio name=slider id=slide3 />
+		<input class="radio" type=radio name=slider id=slide3 />
 		<input class="radio" type=radio name=slider id=slide4 />
 		<input class="radio" type=radio name=slider id=slide5 />
 	
@@ -29,23 +26,23 @@
 				<div class=inner>
 				    <article>
 						<!--<div class=info><h3>Cliffs</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/ustrojstvo-frezernoe-md-01"><img  src="http://garantmarket.by/sl/ustrfrez.jpg"></a>
+						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/ustrojstvo-frezernoe-md-01"><img  src="http://garantmarket.by/sl/ustrfrez.jpg" alt=""></a>
 					</article>
 					
 				    <article>
 						<!--<div class=info><h3>Cliffs</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/stanki/"><img  src="http://garantmarket.by/sl/bankurs.jpg"></a>
+						<a href="http://garantmarket.by/catalog/stanki/"><img  src="http://garantmarket.by/sl/bankurs.jpg" alt=""></a>
 					</article>
 				
 					<article>
 												<!--<div class=info><h3>Cloud Dragon</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/"><img src="http://garantmarket.by/sl/banrejs.jpg"></a> 
+						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/"><img src="http://garantmarket.by/sl/banrejs.jpg" alt=""></a> 
 					</article>
 
 					
 					<article>
 						<!--<div class=info><h3>Mountain Fort</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						 <a href="http://garantmarket.by/sale/"><img  src="http://garantmarket.by/sl/banner5.jpg"></a>
+						 <a href="http://garantmarket.by/sale/"><img  src="http://garantmarket.by/sl/banner5.jpg" alt=""></a>
 					</article>
 					
 					<!--	<article>
@@ -95,7 +92,7 @@
 			<label for=slide5></label>
 			-->
 		</div> <!-- #active -->
-
+</article>
 <style type="text/css">
 
 

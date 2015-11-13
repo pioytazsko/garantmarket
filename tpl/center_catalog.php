@@ -221,7 +221,7 @@ $desc=$desc." ...";
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2">  </span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
+					<span class="cena2">  </span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c order" value="<?php echo $vipitemrez['id']; ?>" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div><?php } else{ ?>
 				
 <div class="cena">
@@ -229,7 +229,7 @@ $desc=$desc." ...";
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
+					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" value="<?php echo $vipitemrez['id']; ?>" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
 				</div>
 <?php }?>
 

@@ -68,7 +68,7 @@ $shopcatrez=mysql_fetch_array($shopcat);
 do
 {
 ?>
-				<li><a href="item_manufactors/<?php echo "$idman"."/"; ?><?php if($shopcatrez['chpu']!='') {echo $shopcatrez['chpu'];} else { echo "element";} echo "/"."$shopcatrez[id]"; ?>"><?php if($shopcatrez['h1']){ echo "$shopcatrez[h1]"; }else{ echo "$shopcatrez[name]"; } ?></a></li><div class="sep"><img src="image/sep_2.png"></div>
+				<li><a href="item_manufactors/<?php echo "$idman"."/"; ?><?php if($shopcatrez['chpu']!='') {echo $shopcatrez['chpu'];} else { echo "element";} echo "/"."$shopcatrez[id]"; ?>"><?php if($shopcatrez['h1']){ echo "$shopcatrez[h1]"; }else{ echo "$shopcatrez[name]"; } ?></a></li><div class="sep"><img src="image/sep_2.png" alt=""></div>
 <?php 
 }
 while($shopcatrez=mysql_fetch_array($shopcat));
@@ -196,7 +196,7 @@ $desc=$desc." ...";
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span><?php $id=$vipitemrez['id']; include('rating.php');?></div>
+					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c order" value="<?php echo $vipitemrez['id']; ?>" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span><?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div><?php } else{ ?>
 				
 <div class="cena">
@@ -204,7 +204,7 @@ $desc=$desc." ...";
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
+					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" value="<?php echo $vipitemrez['id']; ?>" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div>
 <?php }?>
 

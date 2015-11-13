@@ -362,15 +362,11 @@ setTimeout('if (window._gaq != undefined) _gaq.push([\'_trackEvent\', \'NoBounce
 			<div class="header_large">Магазин деревообрабатывающих станков</div>
 			<div class="podval_text"><p>Продажа деревообрабатывающих станков, грамотная консультация специалистов, гарантийные обязательства, высокий уровень обслуживания, доставка.</p>
 <p>&nbsp;</p>
-<p><a href="http://webi.by">Разработка сайта</a> www.webi.by</p>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p> </div>
 		</div>
-		<div class="podval_right">
-			<div class="header_small">Смотрите также</div>
-			<div class="podval_text"><p style="text-align: justify;">У нас также можно купить бытовые деревообрабатывающие станки Мастер Практик, Мастер Универсал, Могилевлифтмаш, Техноприбор , а так же электроплуги ЛС100.</p>
-<p style="text-align: justify;">&nbsp;</p></div>
-</div>	
+
 
 	</div>
 </div>

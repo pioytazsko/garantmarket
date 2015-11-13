@@ -20,7 +20,7 @@ function get_image($id_cat,$man,$database)
 	"image",
 	"id"), array("AND"=>array(
 	"manufekted" => $man,"category"=>$id_cat),"LIMIT"=>1,"ORDER"=>"levl"));
-   //роверка на содержание массива, если есть результат. то берем картинку оттуда
+   //проверка на содержание массива, если есть результат. то берем картинку оттуда
    if(count($datas)!=0)
     {
        return $datas;
@@ -274,7 +274,7 @@ $infocatrez=mysql_fetch_array($infocat);
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
+					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c order" value="<?php echo $vipitemrez['id']; ?>" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div><?php } else{ ?>
 				
 <div class="cena">
@@ -282,7 +282,7 @@ $infocatrez=mysql_fetch_array($infocat);
 
 
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
-					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
+					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" value="<?php echo $vipitemrez['id']; ?>" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
 				</div>
 <?php }?>
 
