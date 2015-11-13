@@ -41,15 +41,16 @@ $arr[]=$database->select("catalog",
 
 
 $message="<p>
-Принят заказ от клиента <b>:".$json->name."</b>, телефон:<b> ".$json->phone."</b>, адрес:<b>".$json->adress.', Примечание:'.$json->note.'</p>';
+Принят заказ от клиента <b>:".$json->name."</b>, телефон:<b> ".$json->phone."</b>, адрес:<b>".$json->adress.'</b>, Примечание:'.$json->note.'</p>';
 //далеедобавляем описания товаров 
 $description='';
 //print_r($arr);
 foreach($arr as $val){
-$description=$description.'<span>Товар:<b>'.$val[0]['name'].'</b>По цене:'.$val[0]['price'].'<a href="/catalog/'.$val[0]['cat_chpu'].'/'.$val[0]['chpu'].'" >Просмотреть товар</a></span>';
+$description=$description.'<span>Товар:<b>'.$val[0]['name'].'</b> По цене: <b>'.number_format($val[0]['price'],0,'.',' ').'руб.</b><a href="http://garantmarket.by/catalog/'.$val[0]['cat_chpu'].'/'.$val[0]['chpu'].'" > Просмотреть товар</a></span><br>';
 };
 $message=$message.$description;
 //echo " Спасибо!!! Ваш заказ принят!";
 foreach ($send_email as $val){ 
-if(mail ( $val,  $subject ,  $message,$headers )){ echo " Спасибо!!! Ваш заказ принят!"; }else {echo 'error';}
+if(mail ( $val,  $subject ,  $message,$headers )){  }else {echo 'error';}
     }
+echo " Спасибо!!! Ваш заказ принят!";
