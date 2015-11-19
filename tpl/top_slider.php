@@ -2,7 +2,7 @@
 
      
 <div id="my-slide2">
-            <a href="http://garantmarket.by/sale/"><img  src="" alt="" data-lazy-src="http://garantmarket.by/images/top_ban.jpg" /></a>
+            <a href="http://garantmarket.by/sale/"><img  src="" alt="image" data-lazy-src="http://garantmarket.by/images/top_ban.jpg" /></a>
 
                    </div>
 

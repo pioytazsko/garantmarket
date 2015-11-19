@@ -26,17 +26,17 @@
 				<div class=inner>
 				    <article>
 						<!--<div class=info><h3>Cliffs</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/ustrojstvo-frezernoe-md-01"><img  src="http://garantmarket.by/sl/ustrfrez.jpg" alt=""></a>
+						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/ustrojstvo-frezernoe-md-01"><img  src="http://garantmarket.by/sl/ustrfrez.jpg" alt="image"></a>
 					</article>
 					
 				    <article>
 						<!--<div class=info><h3>Cliffs</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/stanki/"><img  src="http://garantmarket.by/sl/bankurs.jpg" alt=""></a>
+						<a href="http://garantmarket.by/catalog/stanki/"><img  src="http://garantmarket.by/sl/bankurs.jpg" alt="image"></a>
 					</article>
 				
 					<article>
 												<!--<div class=info><h3>Cloud Dragon</h3> by <a href="http://voyager3.tumblr.com">Brendan Zabarauskas</a></div>-->
-						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/"><img src="http://garantmarket.by/sl/banrejs.jpg" alt=""></a> 
+						<a href="http://garantmarket.by/catalog/prizhimnye_ustrojstva/"><img src="http://garantmarket.by/sl/banrejs.jpg" alt="image"></a> 
 					</article>
 
 					

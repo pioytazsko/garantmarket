@@ -83,7 +83,7 @@ if((count($var[0])) or (count($var[1]))  )
                 <div style=\"height: 143px;\">
                     <a href=\"catalog/".$cat_chpu[0]['chpu']."/".$items[$i]['chpu']."\">
                         <div class='shop_tovar_kart'>
-                            <img src='shopimage/".$items[$i]['image']."' alt=''>
+                            <img src='shopimage/".$items[$i]['image']."' alt='image'>
                         </div>
                     </a>
                 </div>

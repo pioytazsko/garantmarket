@@ -211,7 +211,7 @@ height:600px;
 overflow-y: auto;overflow-x:hidden;margin:0 0 40px 0; cursor:pointer" >
             <?php $query="SELECT name,id FROM catecory WHERE parent=0";$result=mysql_query($query);
             while($result_arr=mysql_fetch_row($result)){
-                    echo "<div style='margin: 10px 0;border-top:1px solid black;' class=\"category\" >".$result_arr[0];
+                    echo "<div style='margin: 10px 0;border-top:1px solid black;' class=\"category\" ><span class='category'>".$result_arr[0]."</span>";
                     requrce($result_arr[1]);  
                     echo"</div>"; 
                     };
@@ -238,8 +238,7 @@ overflow-y: auto;overflow-x:hidden;margin:0 0 40px 0; cursor:pointer" >
  };?>
     </div><div style="float: right;margin-bottom: 100px;" >
     <input type="button"  id="add_product" value="Сохранить изменения">
-<div style="position: fixed;
-left: 1400px;
+<div class='select_radio' style="left: 1400px;
 bottom: 728px;
 padding: 15px 20px;
 font-size: 20px;"><input type="radio"  class="select" name="select" value="0">Слайдер
@@ -253,6 +252,7 @@ font-size: 20px;"><input type="radio"  class="select" name="select" value="0">С
       
         </div>
 <input type="button" id="hide" value="Свернуть>>">
+<input type="button" id="fixed" value="Зафиксировать справа >>">
  <script>  id=<?php echo $id; ?></script>       
 <script src="/js/admin-items.js" >
    

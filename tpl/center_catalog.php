@@ -17,7 +17,7 @@
 			?>
 			<div class="infocat">
             <div class="catname" ><?php include('bread.php') ?></div>
-			<div class="catname"><h1><?php echo "$infocatrez[name]"; ?></h1></div>
+			<div class="catname"><h1><?php echo "$infocatrez[h1]"; ?></h1></div>
 			<div class="catimg"><img src="categoryimages/<?php echo "$infocatrez[img]"; ?>" alt="<?php echo "$infocatrez[name]"."/"; ?>" title="<?php echo "$infocatrez[name]"; ?>" /></div>
 			<div class="catinfo"><?php echo "$infocatrez[deskripshn]"; ?></div>
 			</div>

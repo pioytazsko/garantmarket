@@ -30,7 +30,7 @@ $datas_complect=$database->select("catalog",array("id","image","name","price","c
 if(count($datas_complect)!=0){
 echo "<div class='shop_header' ><div class='shop_opismm'>В наборе дешевле</div></div><div class=\"complect\">
 <div class=\"main_item\">
-<div class='image_complect'><img src=\"/shopimage/".$datas[0]['image']."\" alt=\"\"></div>
+<div class='image_complect'><img src=\"/shopimage/".$datas[0]['image']."\" alt=\"image\"></div>
 <div class='item_name'>".$datas[0]['name']."</div>
 <span id='price_item' id_item='".$datas[0]['id']."' data='".$datas[0]['price']."'>Цена:".number_format($datas[0]['price'],0,0,' ')." руб. </span>
 </div>";$price=$datas[0]['price'];
@@ -51,7 +51,7 @@ foreach($datas_complect as $val){
 <div class=\"complect_item\">
 <input type='checkbox' checked id_complect='".$val['id']."' data_proc='".$proc[$i]."' data='".$val['price']."' class='check_complect'>
  <div class='image_complect'>
- <img src=\"/shopimage/".$val['image']."\" alt=\"\">
+ <img src=\"/shopimage/".$val['image']."\" alt=\"image\">
  </div>
  <div class='item_name'>
  <a href='/catalog/".$select[0]['chpu']."/".$val['chpu']."' >".$val['name']."</a>

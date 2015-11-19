@@ -25,9 +25,9 @@
 	<div class="head">
 		<div class="head_top">
 			<a href="index.php"><div style="height:85px;width:220px;float:left"></div></a>
-			<div class="razdel"><img src="image/sep.png" alt=""></div>
+			<div class="razdel"><img src="image/sep.png" alt="image"></div>
 			<div class="head_text"><div class="top1"><?php include("moduls/user1.php");?></div></div>
-			<div class="razdel"><img src="image/sep.png" alt=""></div>
+			<div class="razdel"><img src="image/sep.png" alt="image"></div>
 			<div  id="telephone" class="head_text"><?php include("moduls/user2.php");?></div>
 		</div>
         
@@ -37,9 +37,9 @@
 
 <div class="phones_menu">Наши телефоны:</div>
 <div class="catalog_menu">
-    <span>8 (029) 633 63 66</span>
+    <b>8 (029) 633 63 66</b>
     <br>
-    <span>8 (029) 500 45 33</span>
+    <b>8 (029) 500 45 33</b>
 
     </div>
 

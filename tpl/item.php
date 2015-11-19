@@ -34,7 +34,7 @@ $manimage="<a href='manufactors/$chpurez/$selmanrez[id]' title='$selmanrez[name]
 else
 {
 $man="Производитель не указан";
-$manimage="<img src='manufected/no_image.png' />";
+$manimage="<img src='manufected/no_image.png' alt='image' />";
 }
 
 $item2=mysql_query("SELECT * FROM catalog WHERE price<$itemrez[price] and category=$itemrez[category]");
@@ -80,7 +80,7 @@ $catrez=mysql_fetch_array($cat);
 <!--Галерея-->			
 <div class="shop_galery b1c-good">
 <div class="shapka1">
-				<div class="blok_name b1c-name"><h1><?php echo "$itemrez[name]";$them_buy=$itemrez['name']; ?></h1></div>
+				<div class="blok_name b1c-name"><h1><?php echo "$itemrez[name]";$them_buy=$itemrez['h1']; ?></h1></div>
 			</div>
 			<script type="text/JavaScript">
 // prepare the form when the DOM is ready 
@@ -160,14 +160,14 @@ echo "<ul><li>";
 ?>
 
 <?php
-echo "<img src='shopimage/$image' / alt=''></li>";
+echo "<img src='shopimage/$image' / alt='image'></li>";
 do
 {
 echo "<li>";
 ?>
 <a href="shopimage/<?php echo "$dopimgrez[image]"; ?>" rel="lightbox[plants]">
 <?php
-echo"<img src='shopimage/$dopimgrez[image]' alt=''/></a></li>";
+echo"<img src='shopimage/$dopimgrez[image]' alt='image'/></a></li>";
 }
 while($dopimgrez=mysql_fetch_array($dopimg));
 echo "</ul>";
@@ -237,7 +237,7 @@ echo "</ul>";
 				{
 				if($paramsitemrez['val']){
 				?>
-				<div class="shop_button5"><div class="shop_buttonim"><img src="icon/<?php echo "$paramsitemrez2[image]"; ?>" alt=""/></div><div class="shop_buttonval"><strong><?php echo "$paramsitemrez2[name]"; ?></strong> : <span style="  color: #2DACDD;
+				<div class="shop_button5"><div class="shop_buttonim"><img src="icon/<?php echo "$paramsitemrez2[image]"; ?>" alt="image"/></div><div class="shop_buttonval"><strong><?php echo "$paramsitemrez2[name]"; ?></strong> : <span style="  color: #2DACDD;
   padding-left: 5px;
   /* font-weight: bold; */
   font-size: 16px;"><?php echo "$paramsitemrez[val]"; ?></span></div></div>
@@ -293,7 +293,7 @@ echo "</ul>";
 
 				<div class="shop_tovar2 b1c-good">
 					
-					<div style="height: 143px;"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><div class="shop_tovar_kart"><img src="shopimage/<?php echo "$image4"; ?>" alt=""/></div></a></div>
+					<div style="height: 143px;"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><div class="shop_tovar_kart"><img src="shopimage/<?php echo "$image4"; ?>" alt="image"/></div></a></div>
 
 					<div class="shop_katalog_name b1c-name"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($itemrez4['chpu']!='') echo $itemrez4['chpu']; else echo "item"; ?>" title="<?php echo "$itemrez4[name]"; ?>"><?php echo "$itemrez4[name]"; ?></a></div>
 					

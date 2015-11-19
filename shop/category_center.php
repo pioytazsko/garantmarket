@@ -68,7 +68,7 @@ $shopcatrez=mysql_fetch_array($shopcat);
 do
 {
 ?>
-				<li><a href="item_manufactors/<?php echo "$idman"."/"; ?><?php if($shopcatrez['chpu']!='') {echo $shopcatrez['chpu'];} else { echo "element";} echo "/"."$shopcatrez[id]"; ?>"><?php if($shopcatrez['h1']){ echo "$shopcatrez[h1]"; }else{ echo "$shopcatrez[name]"; } ?></a></li><div class="sep"><img src="image/sep_2.png" alt=""></div>
+				<li><a href="item_manufactors/<?php echo "$idman"."/"; ?><?php if($shopcatrez['chpu']!='') {echo $shopcatrez['chpu'];} else { echo "element";} echo "/"."$shopcatrez[id]"; ?>"><?php if($shopcatrez['h1']){ echo "$shopcatrez[h1]"; }else{ echo "$shopcatrez[name]"; } ?></a></li><div class="sep"><img src="image/sep_2.png" alt="image"></div>
 <?php 
 }
 while($shopcatrez=mysql_fetch_array($shopcat));

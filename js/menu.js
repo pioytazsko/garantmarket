@@ -283,8 +283,8 @@ $(document).ready(function() {
                 // далее вставляем в корзину полученный товар 
                 var div = '';
                 for (var i = 0; i < data.length; ++i) {
-                    div = " <div class=\"basket_line_items\" data='" + data[i][0].price + "' ><div class='basket_items'><span>" + data[i][0].name + "</span></div>                <div class='basket_description'><div class=basket_image_item><img src='/shopimage/" + data[i][0].image + "' alt='img'></div><div class=basket_links><a href='/catalog/" + data[i][0].cat_chpu + "/" + data[i][0].chpu + "'>Просмотреть этот товар</a></div><div class='delete_item_basket' value='" + data[i][0].id + "'><span>&times;</span></div><div class='basket_item_price'><span>Цена:" + numeric_format(data[i][0].price, ' ', ',') + " руб.</span></div></div></div>";
-                    $('.basket_consist').append(div);
+                    div = div+" <div class=\"basket_line_items\" data='" + data[i][0].price + "' ><div class='basket_items'><span>" + data[i][0].name + "</span></div>                <div class='basket_description'><div class=basket_image_item><img src='/shopimage/" + data[i][0].image + "' alt='img'></div><div class=basket_links><a href='/catalog/" + data[i][0].cat_chpu + "/" + data[i][0].chpu + "'>Просмотреть товар</a></div><div class='delete_item_basket' value='" + data[i][0].id + "'><span>&times;</span></div><div class='basket_item_price'><span>Цена:" + numeric_format(data[i][0].price, ' ', ',') + " руб.</span></div></div></div>";
+                    $('.basket_consist').html(div);
 
 
                 };
@@ -293,6 +293,9 @@ $(document).ready(function() {
         //показываем карзину и поле
         $('.form_buy_basket').show();
         $('.zakaz_basket').show();
+        $('.close_basket').click(function(){
+         $('.form_buy_basket').trigger('click');
+        })
         //        закрытие карзины  и поля под ей
         $('.form_buy_basket').click(function() {
             $(this).hide();

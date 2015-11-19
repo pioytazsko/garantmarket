@@ -514,11 +514,11 @@ a.button32:hover:before {
 }
 .image_complect {
     width: 150px;
-    height: auto;
+    height: 150px;
     margin: 0 0 10px 0;
 }
 .image_complect img {
-    height: 150px;
+  
     max-height: 150px;
     max-width: 150px;
 }
@@ -770,6 +770,56 @@ width: 350px;
     margin: 0 0 -5px;
     /*    z-index: -10;*/
 }
+.confirm_or_back{
+display: none;
+    position: fixed;
+margin: -100px 0 0 -250px;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    z-index: 500;
+box-shadow: 0 0 5px white;
+    border-radius: 3px;
+}
+.confirm_or_back img{
+max-height: 150px;
+max-width: 150px;
+
+}
+.close_basket{
+display: inline-block;
+    float: right;
+    margin-right: 20px !important; 
+    cursor: pointer;
+}
+.text_about_checkout{
+margin: 10px 5px -8px 5px;
+}
+.text_about_checkout span{
+    font-size: 1.2em;
+margin: 5px 0px;
+}
+.image_confirm{
+    margin: 7px;
+width: 150px;
+height: 150px;
+float: left;
+    border: 1px solid grey;
+}
+.next_buy{
+float: left;
+    margin: -2px 5px ;
+    padding: 7px 10px;
+    background-color: grey;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.name_confirm_buy{
+margin: 10px 0px;
+}
 #primary_nav_wrap {
     margin-top: 15px
 }
@@ -790,6 +840,13 @@ width: 350px;
     padding: 0 15px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
+#checkout{
+    float: right;
+}
+#next_buy{
+clear: left;
+}
+
 #primary_nav_wrap ul li {
     position: relative;
     float: left;

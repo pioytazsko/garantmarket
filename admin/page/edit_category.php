@@ -178,7 +178,8 @@ overflow-y: auto;overflow-x:hidden;margin:0 0 40px 0; cursor:pointer" >
 <div class="select_items">
         
         </div>
-        <input type="button" id="hide" value="Свернуть>>">
+        <input type="button" id="hide" style="top:1059px;left: 580px" value="Свернуть>>">
+        <input type="button" id="fixed" style="top:1059px;" value="Зафиксировать справа >>">
   <script>  id=<?php echo $id; ?></script>        
 <script src="/js/admin-category.js">
               

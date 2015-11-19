@@ -4,7 +4,7 @@ require_once(__ROOT__.'/medoo.min.php');
 require_once(__ROOT__.'/config.php');
 require(__ROOT__.'/send_email.php');
 $headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=windows-1251' . "\r\n";  
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";  
 $subject="Заказ  товаров";
 $database = new medoo(array(
             'database_type' => $config_db['database_type'],
@@ -41,7 +41,7 @@ $arr[]=$database->select("catalog",
 
 
 $message="<p>
-Принят заказ от клиента <b>:".$json->name."</b>, телефон:<b> ".$json->phone."</b>, адрес:<b>".$json->adress.'</b>, Примечание:'.$json->note.'</p>';
+Принят заказ от клиента :<b>".$json->name."</b>, телефон:<b> ".$json->phone."</b>, адрес:<b>".$json->adress.'</b>, Примечание:'.$json->note.'</p>';
 //далеедобавляем описания товаров 
 $description='';
 //print_r($arr);

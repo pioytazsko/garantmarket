@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="content-style-type" content="text/css">
 <meta http-equiv="content-language" content="ru" />
-
+<link rel="canonical" href="http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']  ?>" />
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" >
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <link rel="stylesheet" type="text/css" href="/css/lightbox.css">
@@ -91,7 +91,7 @@ var google_remarketing_only = true;
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/947355605/?value=1.00&amp;currency_code=RUB&amp;label=7CmvCP6xsF4Q1f_dwwM&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="image" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/947355605/?value=1.00&amp;currency_code=RUB&amp;label=7CmvCP6xsF4Q1f_dwwM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript> 
 <?php require_once ("tpl/top_slider.php"); ?>

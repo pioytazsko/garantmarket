@@ -71,7 +71,7 @@ $infocatrez=mysql_fetch_array($infocat);
 					if($vipitemrez['share']){
 				?>
 				<div style="position: absolute;right: 8px;bottom: -25px;">
-				<img src="image/act_krug.png" style="width: 50px; height: 50px;padding:0 7px 30px 0px;" alt=""/>
+				<img src="image/act_krug.png" style="width: 50px; height: 50px;padding:0 7px 30px 0px;" alt="image/act_krug.png"/>
 				</div>
 				<?php } ?>
 				<img src="shopimage/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" />
@@ -108,17 +108,10 @@ $infocatrez=mysql_fetch_array($infocat);
 
 <?php if($view==0) {?>
 				<div class="cena22">
-				
-
-
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
 					<span class="cena2"></span><span class="cena2"></span></div><div class="b1c-sm2"><button class="b1c order" value="<?php echo $vipitemrez['id']; ?>" >ПОД ЗАКАЗ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?></div>
 				</div><?php } else{ ?>
-				
 <div class="cena">
-				
-
-
 <div style="float:left;padding-top: 7px;" class="cena-h b1c-name">
 					<span class="cena2"> Цена: </span><?php echo "$price" ?> <span class="cena2"><?php echo "$val1" ?></span></div><div><button class="b1c" value="<?php echo $vipitemrez['id']; ?>" >КУПИТЬ</button><span class="rating">Рейтинг:</span> <?php $id=$vipitemrez['id']; include('rating.php');?> </div>
 				</div>
@@ -132,24 +125,6 @@ $infocatrez=mysql_fetch_array($infocat);
 while($vipitemrez=mysql_fetch_array($vipitem));
 ?>	
 <div style="clear:both;"></div>	
-
-	
-			
-		
-		
-	
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="header_big">О компании</div>
 			<?php echo "$sitrez[opisanie]"; ?>
 		</div>	</div>
