@@ -1,28 +1,28 @@
 	<div style="clear:both"></div>
 	
+	<div class="social"><div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=01" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div></div>
 	
 	<div class="podval">
 		<?php include("moduls/user4.php"); ?>
 		<?php include("moduls/user5.php"); ?>
 	</div>
-</div>
+<!--</div>-->
 <?php include('./tpl/basket.php');?>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="/js/jquery.menu-aim.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8" src="/callme/js/callme.js"></script>
-
-<!-- jquery -->
-<!-- easing plugin ( optional ) -->
 <script src="/js/easing.js" type="text/javascript"></script>
-<!-- UItoTop plugin -->
 <script src="/js/jquery.ui.totop.js" type="text/javascript"></script>
-<!-- Starting the plugin -->
-<script type="text/javascript">
-$(document).ready(function() {
-
- 
-$().UItoTop({ easingType: 'easeOutQuart' });
- 
-});
-</script>
+<script src="js/myskripts.js"></script>
+<script src="js/myskripts3.js"></script>
+<script src="js/craftyslide.js"></script>
+<script src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/jquery.devrama.slider.js"></script>
+<script type="text/javascript" charset="utf-8" src="/buyme/js/buyme.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/autocomplete.js"></script>
+<script src="/js/menu.js"></script>
 <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter27971829 = new Ya.Metrika({ id:27971829, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/27971829" style="position:absolute; left:-9999px;" alt="yandex" /></div></noscript><!-- /Yandex.Metrika counter -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -34,14 +34,7 @@ $().UItoTop({ easingType: 'easeOutQuart' });
   ga('send', 'pageview');
 
 </script>
-<script src="js/myskripts.js"></script>
-<script src="js/myskripts3.js"></script>
-<script src="js/craftyslide.js"></script>
-<script src="js/lightbox.js"></script>
-<script type="text/javascript" src="js/jquery.devrama.slider.js"></script>
-<script type="text/javascript" charset="utf-8" src="/buyme/js/buyme.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/autocomplete.js"></script>
-<script src="/js/menu.js"></script>
+
 <!-- Google Tag Manager -->
 
 <!-- End Google Tag Manager -->

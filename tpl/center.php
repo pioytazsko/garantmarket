@@ -74,7 +74,7 @@ $infocatrez=mysql_fetch_array($infocat);
 				<img src="image/act_krug.png" style="width: 50px; height: 50px;padding:0 7px 30px 0px;" alt="image/act_krug.png"/>
 				</div>
 				<?php } ?>
-				<img src="shopimage/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" />
+				<img src="shopimagepreview/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" />
 				</a>
 				</div>
 				<div class="tovar_opis">

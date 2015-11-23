@@ -110,7 +110,7 @@ $vibormanrez=mysql_fetch_array($viborman);
 			?>
 <div class="blokpodkat"><a href="item_man.php?id_cat=<?php echo "$parcatres[id]"; ?>&idman=<?php echo "$idman"; ?>" title="<?php echo "$parcatres[name]"; ?>" >
 				<div class="podkatname"><?php echo "$parcatres[name]"; ?></div>
-				<div class="podkatimg"><img src="shopimage/<?php
+				<div class="podkatimg"><img src="shopimagepreview/<?php
                    $res=0;
 $data_pod=get_image($parcatres['id'],$idman,$database);
     if(count($data_pod)!=0){
@@ -244,7 +244,7 @@ $infocatrez=mysql_fetch_array($infocat);
 			
 				<div class="blok_tovar b1c-good">
 				<div class="tovar_name b1c-name"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "item"; ?>" title="<?php echo "$name"; ?>"><?php echo "$name"; ?></a></div>
-				<div class="tovar_image"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "item"; ?>" title="<?php echo "$name"; ?>"><img src="shopimage/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" /></a></div>
+				<div class="tovar_image"><a href="catalog/<?php echo $infocatrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "item"; ?>" title="<?php echo "$name"; ?>"><img src="shopimagepreview/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" /></a></div>
 				<div class="tovar_opis">
 				<?php 
 					$paramsitem=mysql_query("SELECT * FROM paramsitem WHERE iditem=$vipitemrez[id]");

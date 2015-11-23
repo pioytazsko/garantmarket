@@ -788,6 +788,11 @@ max-height: 150px;
 max-width: 150px;
 
 }
+.social{
+text-align: center;}
+.pluso-more{
+display: none !important;
+}
 .close_basket{
 display: inline-block;
     float: right;
@@ -809,7 +814,7 @@ float: left;
     border: 1px solid grey;
 }
 .next_buy{
-float: left;
+float:right;
     margin: -2px 5px ;
     padding: 7px 10px;
     background-color: grey;

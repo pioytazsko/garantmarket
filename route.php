@@ -32,9 +32,21 @@ $idcat=$_GET['idcat'];//категории новости
 $id=$_GET['id'];//товыры
 $idn=$_GET['idn'];
  if($_SERVER['QUERY_STRING']===''){
- $title=$sitrez['title'];
-$keywords=$sitrez['keywords'];
-$kewdesk=substr(strip_tags($sitrez['desc']), 0, 400);
+     
+     
+// $title=$sitrez['title'];
+//$keywords=$sitrez['keywords'];
+//$kewdesk=substr(strip_tags($sitrez['desc']), 0, 400);
+     $datas = $database->select("seo", array(
+	"catalog_key",
+	"catalog_desc","catalog_title"
+),array(
+	"id" => "1"
+));
+   $title=$datas[0]['catalog_title'] ; 
+   $keywords=$datas[0]['catalog_key'] ; 
+   $kewdesk=$datas[0]['catalog_desc'] ; 
+     
  
  }elseif($id!=null){
  $datas = $database->select("catalog", array(

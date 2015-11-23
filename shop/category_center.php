@@ -157,7 +157,7 @@ $desc=$desc." ...";
 
 				<div class="blok_tovar b1c-good">
 				<div class="tovar_name b1c-name"><a href="catalog/<?php echo $vipitemrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "$item"; ?>" title="<?php echo "$name"; ?>"><?php echo "$name"; ?></a></div>
-				<div class="tovar_image"><a href="catalog/<?php echo $vipitemrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "$item"; ?>" title="<?php echo "$name"; ?>"><img src="shopimage/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" /></a></div>
+				<div class="tovar_image"><a href="catalog/<?php echo $vipitemrez['chpu']."/"; if($vipitemrez['chpu']!='') echo $vipitemrez['chpu']; else echo "$item"; ?>" title="<?php echo "$name"; ?>"><img src="shopimagepreview/<?php echo "$image"; ?>" alt="<?php echo "$name"; ?>" title="<?php echo "$name"; ?>" /></a></div>
 				
 				<div class="tovar_opis">
 				<?php
