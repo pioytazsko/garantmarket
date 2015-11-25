@@ -82,10 +82,6 @@ $catrez=mysql_fetch_array($cat);
 <div class="shapka1">
 				<div class="blok_name b1c-name"><h1><?php echo "$itemrez[name]";$them_buy=$itemrez['h1']; ?></h1></div>
 			</div>
-			<script type="text/JavaScript">
-// prepare the form when the DOM is ready 
-
-</script>
 <div id="gallery" >
 	<div class="osnimg"><a href="shopimage/<?php echo "$image"; ?>" rel="lightbox[plants]"><img src="shopimage/<?php echo "$image"; ?>"  alt="<?php echo "$itemrez[name]" ?>" id="main-img" title="<?php echo "$itemrez[name]" ?>" /></a></div>
 <div style="float:right">

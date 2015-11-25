@@ -39,10 +39,10 @@ if (count($datas)==0){
 $datas_disc = $database->select("location_discount", '*', array('city'=>'Other') );
 }
 //учтем скидку вы цене товара 
-//foreach($arr as $val){
-//$val['catalog.price']=
-//
-//}
-
+foreach($arr as &$val){
+$val[0]['price']=$val[0]['price']-$datas_disc[0]['discount']*$val[0]['price']/100;
+}
+//print_r($datas_disc);
+//print_r($arr);
 
 $res=json_encode($arr);echo $res;

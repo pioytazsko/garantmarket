@@ -35,7 +35,14 @@ $arr[]=$database->select("catalog",
 ));
 };
 //формируем письмо  для отправки менеджеру
-
+require_once(__ROOT__.'/location/SxGeo.php');
+$SxGeo = new SxGeo(__ROOT__.'/location/SxGeo.dat');
+$ip=$_SERVER['REMOTE_ADDR'];
+$city=$SxGeo->get($ip);
+$data = $database->select("location_discount", '*', array('city'=>$city['city']['name_en']) );
+if (count($datas)==0){
+$data = $database->select("location_discount", '*', array('city'=>'Other') );
+}
 
 
 
@@ -45,7 +52,8 @@ $message="<p>
 //далеедобавляем описания товаров 
 $description='';
 //print_r($arr);
-foreach($arr as $val){
+foreach($arr as &$val){
+ $val[0]['price']=$val[0]['price']-$val[0]['price']/100*$data[0]['discount'];   
 $description=$description.'<span>Товар:<b>'.$val[0]['name'].'</b> По цене: <b>'.number_format($val[0]['price'],0,'.',' ').'руб.</b><a href="http://garantmarket.by/catalog/'.$val[0]['cat_chpu'].'/'.$val[0]['chpu'].'" > Просмотреть товар</a></span><br>';
 };
 $message=$message.$description;

@@ -1,11 +1,13 @@
 <?php
+define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+
 require_once('_keybord_lang.php');
+include_once(__ROOT__.'/location/read_location.php');
 //require_once('LangCorrect.php');
 //$corrector = new Text_LangCorrect();
 if (!$DB)
     include($DOCUMENT_ROOT . "_config.php");
 include($DOCUMENT_ROOT . "_mysql.php");
-
 
 class Lingua_Stem_Ru {
 
@@ -204,6 +206,10 @@ if ($sqlQuery != '') {
             $result=$Q->query($DB,$query);
             $result=mysql_fetch_array($result);
 //         print_r($result);
+            // сделаем коректировку цены
+            
+            $sqlItem['price']=$sqlItem['price']-$sqlItem['price']*$datas[0]['discount']/100;
+//            print_r($datas);
             $price=number_format($sqlItem['price'],0,',',' ');
                          echo '<div id="block" style=""><div style="vertical-align:middle;float:left;clear:left;margin-top:10px;margin-left:10px">
                                     <a href="/catalog/'.$result['chpu'].'/'.$sqlItem['chpu'].'">

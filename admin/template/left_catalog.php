@@ -12,4 +12,5 @@
 		<div class="punct1"><a href="index.php"><div class="opis">На главную</div></a></div>
 		<div style="background:red" class="punct1"><a href="catalog.php?idp=25"><div  class="opis">Импорт новых товаров</div></a></div>
 		<div  class="punct"><a href="catalog.php?idp=26"><div  class="opis">Экспорт товаров в EXEL</div></a></div>
+		<div  class="punct"><a href="catalog.php?idp=27"><div  class="opis">Цены по городам</div></a></div>
 </div>

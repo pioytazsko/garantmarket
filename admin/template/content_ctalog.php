@@ -130,7 +130,10 @@ if($idp==26)
 {
 include("page/export_exel.php");
 }
-
+if($idp==27)
+{
+include("page/location.php");
+}
 ?>
 </div>
 	
