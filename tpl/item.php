@@ -17,7 +17,7 @@ if($mankursrez>0)
 {
 $curs=$curs-$mankursrez['kursman'];
 }
-
+    $itemrez['price']=$itemrez['price']-$itemrez['price']/100*$datas[0]['discount'];
 $price= str_replace(',',' ',number_format($itemrez['price']));
 $price2= $itemrez['price']*$curs;
 $price2= str_replace(',',' ',number_format($price2));
@@ -84,22 +84,7 @@ $catrez=mysql_fetch_array($cat);
 			</div>
 			<script type="text/JavaScript">
 // prepare the form when the DOM is ready 
-$(document).ready(function() {
-	$("#gallery li img").hover(function(){
-		$('#main-img').attr('src',$(this).attr('src').replace('thumb/', ''));
-	});
-	var imgSwap = [];
-	 $("#gallery li img").each(function(){
-		imgUrl = this.src.replace('thumb/', '');
-		imgSwap.push(imgUrl);
-	});
-	$(imgSwap).preload();
-});
-$.fn.preload = function() {
-    this.each(function(){
-        $('<img/>')[0].src = this;
-    });
-}
+
 </script>
 <div id="gallery" >
 	<div class="osnimg"><a href="shopimage/<?php echo "$image"; ?>" rel="lightbox[plants]"><img src="shopimage/<?php echo "$image"; ?>"  alt="<?php echo "$itemrez[name]" ?>" id="main-img" title="<?php echo "$itemrez[name]" ?>" /></a></div>
@@ -394,12 +379,4 @@ echo "</ul>";
 				<div class="add_otzivform"><?php include("shop/formotziva.php");?></div>
 			</div>
 	</div>
-	
-
-<!--Конец дополнительной информации-->
-			
-	<script>
-			$('.shop_tovar2').last().css('margin-right', '0px');
-</script>		
-
 </div>

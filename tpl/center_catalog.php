@@ -162,7 +162,7 @@ $newname=$vipitemrez['image'];
 $picture=explode('/', $newname);
     $image = end($picture);
 unset($picture);    
-    
+    $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];    
 $name=$vipitemrez['name'];
 $price= str_replace(',',' ',number_format($vipitemrez['price']));
     $view=$vipitemrez['publick'];

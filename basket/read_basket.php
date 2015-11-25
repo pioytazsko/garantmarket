@@ -28,5 +28,21 @@ $arr[]=$database->select("catalog",
 ));
 };
 //print_r($arr);
+//делаем скидку для локалей
+require_once(__ROOT__.'/location/SxGeo.php');
+$SxGeo = new SxGeo(__ROOT__.'/location/SxGeo.dat');
+$ip=$_SERVER['REMOTE_ADDR'];
+$city=$SxGeo->get($ip);
+$datas_disc = $database->select("location_discount", '*', array('city'=>$city['city']['name_en']) );
+
+if (count($datas)==0){
+$datas_disc = $database->select("location_discount", '*', array('city'=>'Other') );
+}
+//учтем скидку вы цене товара 
+//foreach($arr as $val){
+//$val['catalog.price']=
+//
+//}
+
 
 $res=json_encode($arr);echo $res;

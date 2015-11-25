@@ -42,6 +42,7 @@ $curs=$curs-$mankursrez['kursman'];
 
 $newname=$vipitemrez['image'];
     $view=$vipitemrez['publick'];
+    $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];
 $temp=explode('/', $newname);    
 $image = end($temp);
 $name=$vipitemrez['name'];

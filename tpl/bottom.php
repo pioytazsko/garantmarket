@@ -55,3 +55,4 @@ var google_remarketing_only = true;
 </noscript> 
 </body>
 </html>
+<?php include_once ("tpl/location.php");?>

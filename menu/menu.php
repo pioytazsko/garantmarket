@@ -23,7 +23,7 @@ $resultat []=$resulr;
                         </li>
                                             
                         <li class="main_li">
-                            <a class="dropdown-toggle pull-left menu_catalog " id='menu_catalog' data-toggle="dropdown" href="/cataloge.php"> &#9662 Каталог</a>
+                            <a class="dropdown-toggle pull-left menu_catalog "  id='menu_catalog' data-toggle="dropdown" href="/cataloge.php"> &#9662 Каталог</a>
                             <ul class="dropdown-menu" role="menu">
                                 <?php foreach($resultat as $key=>$values ){ 
                     $query_parent="SELECT id,name,chpu,specification FROM catecory WHERE parent='".$values['id']."' ORDER BY levl";

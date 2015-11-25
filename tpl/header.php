@@ -1,5 +1,6 @@
 <?php include("db.php");?>
-<?php include("title.php"); ?>
+<?php include("title.php");require_once ("location/read_location.php"); ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ru">
@@ -14,7 +15,14 @@
 <meta http-equiv="content-language" content="ru" />
 <link rel="canonical" href="http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']  ?>" />
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" >
-<link rel="stylesheet" type="text/css" href="/css/production.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="/css/news_style.css">
+<link rel="stylesheet" type="text/css" href="/css/style_shop.css">
+<link rel="stylesheet" type="text/css" href="/css/craftyslide.css">
+<link rel="stylesheet" type="text/css" href="/css/ui.totop.css">
+<link rel="stylesheet" type="text/css" href="/css/all.css">
+<link rel="stylesheet" type="text/css" href="/css/menu.css" > 
 </head>
 <body>
       <!-- Google Code for garantmarket.by -->

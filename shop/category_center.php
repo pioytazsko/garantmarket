@@ -139,6 +139,7 @@ $image = end($picture);
     unset($picture);
 $name=$vipitemrez['name'];
 $view=$vipitemrez['publick'];
+        $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];
 $price= str_replace(',',' ',number_format($vipitemrez['price']));
 $price2= $vipitemrez['price']*$curs;
 $price2= str_replace(',',' ',number_format($price2));
