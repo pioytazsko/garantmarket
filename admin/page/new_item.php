@@ -111,7 +111,14 @@
 			<div class="name1"><input name="image" type="file" /></div>
 		</div>
 		<div class="add_image"><img src="../shopimage/no_image.png"></div>
-		
+	<div class="remark">
+		<div class="text">Скидки  для городов:</div>
+		<input type="checkbox" name="location">
+        		
+	<br>
+	<br>
+	<br>
+    </div>	
 <div class="update4"><input name="submit" type="submit" value="Добавить"></div>
 		
 </div>

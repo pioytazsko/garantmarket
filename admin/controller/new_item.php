@@ -1,5 +1,11 @@
 <?php include("../db.php");
 //обробатываем изображение
+$loc=$_POST['location'];
+//echo $loc;
+if ($loc=='on'){$loc=1;}else{$loc=0;};
+
+
+
 function resize($photo_src, $width, $name){
 $parametr = getimagesize($photo_src);
 list($width_orig, $height_orig) = getimagesize($photo_src);
@@ -110,7 +116,7 @@ $unit=trim($_POST['unit']);
 if(1==1)
 {
 
-$rez=mysql_query ("INSERT INTO catalog (iditem, name, price, linkodzor, linkodzortitle, linkotziv, linkotzivtitle, manufekted, category, deskripshn, keywords, spase, vip, levl, filetitle, unit, image,  	filename) VALUES  ('$iditem', '$name', '$price', '$linkodzor', '$linkodzortitle', '$linkotziv', '$linkotzivtitle', '$manufekted', '$category', '$deskripshn', '$keywords', '$spase', '$vip', '$levl', '$filetitle', '$unit', '$image', '$file') ");
+$rez=mysql_query ("INSERT INTO catalog (iditem, name, price, linkodzor, linkodzortitle, linkotziv, linkotzivtitle, manufekted, category, deskripshn, keywords, spase, vip, levl, filetitle, unit, image,  	filename, local_price) VALUES  ('$iditem', '$name', '$price', '$linkodzor', '$linkodzortitle', '$linkotziv', '$linkotzivtitle', '$manufekted', '$category', '$deskripshn', '$keywords', '$spase', '$vip', '$levl', '$filetitle', '$unit', '$image', '$file','$loc') ");
 if($rez=='true')
 {
 $url="../catalog.php?idp=5&idcom=1";

@@ -189,6 +189,24 @@ echo "<div class='nocoment'>Вы ввели ID который уже испол�
 					<div class="name"><input name="share" type="text" value="<?php echo "$myrow[share]"; ?>" /></div>
 		</div>
 		<div class="remark">
+		<div class="text">Скидки  для городов:</div>
+				<?php
+             $loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$id);
+    $loc=mysql_fetch_row($loc);
+//    print_r($loc);
+    if($loc[0]==1){
+    echo '<input type="checkbox" name="location" checked>';
+    }else{
+    echo '<input type="checkbox" name="location">';
+    
+    }
+            
+            ?>
+	<br>
+	<br>
+	<br>
+    </div>
+		<div class="remark">
 			<div class="text">Изображение:</div>
 			<div class="text1">Рекомендуемый размер 90px на 90px</div>
 			<div class="name1"><input name="image" type="file" /></div>
@@ -198,12 +216,27 @@ echo "<div class='nocoment'>Вы ввели ID который уже испол�
 <div class="update4"><input name="id" type="hidden" value="<?php echo "$myrow[id]"; ?>"><input name="submit" type="submit" value="Обновить позицию"></div>
 		
 </div>
-	
-	
+
 	
 	
 	</div></form>
-<div style="font-size:25px">Сопутствующие товары</div>
+<div class="remark">
+	<br>
+	<br>
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+<div style="font-size:25px; float:left; clear:left;position:relative">Сопутствующие товары</div>
+</div>
 <!--сопутствующие т овары-->
 
  <div style="border:1px solid black;width: 900px;

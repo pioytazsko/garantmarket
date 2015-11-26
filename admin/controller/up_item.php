@@ -4,7 +4,8 @@ $id=$_POST['id'];
 
 $item=mysql_query("SELECT * FROM catalog WHERE id=$id", $db);
 $items=mysql_fetch_array($item);
-$newim=end(explode('/', $items['image']));
+$value=explode('/', $items['image']);
+$newim=end($value);
 $newfile=$items['filename'];
 $image=$newim;
 if($_FILES['image']['size']!='')
@@ -188,16 +189,20 @@ while($dopparrez=mysql_fetch_array($doppar));
 
 //Конц обработки дополнительных параметров
 
-
+$loc=$_POST['location'];
+//echo $loc;
+if ($loc=='on'){$loc=1;}else{$loc=0;};
 if($iditem!='')
 {
-$result=mysql_query("SELECT * FROM catalog WHERE iditem=$iditem AND id!=$id");
+$result=mysql_query("SELECT * FROM catalog WHERE iditem='".$iditem."' AND id!='".$id."'");
+//    print_r($result);
 $myrow=mysql_fetch_array($result);
+    
 if($myrow<1)
 {
 $ednews=mysql_query("UPDATE catalog SET name='$name', price='$price', linkodzor='$linkodzor', linkodzortitle='$linkodzortitle', linkotziv='$linkotziv', 
 linkotzivtitle='$linkotzivtitle', manufekted='$manufekted', category='$category',deskripshn ='$deskripshn', keywords='$keywords', image='$image', spase='$spase', 
-vip='$vip', levl='$levl', filetitle='$filetitle', unit='$unit', iditem='$iditem', filename='$newfile', chpu='$chpu', h1='$h1', title='$title', description='$description',share=$share 
+vip='$vip', levl='$levl', filetitle='$filetitle', unit='$unit', iditem='$iditem', filename='$newfile', chpu='$chpu', h1='$h1', title='$title', description='$description',share=$share ,local_price='$loc'
 WHERE id=$id ", $db);
 header("Location: ".$_SERVER['HTTP_REFERER']."&idcom=1");
 }

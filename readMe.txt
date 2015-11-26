@@ -33,3 +33,6 @@ searchkeyword.php
 12. Medicine
 13. Invisible Sun
 14. Wall Of Death
+
+
+да, и в комплектах цена зависит от локали только для главного товара, на комплектные нет.

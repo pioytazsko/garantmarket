@@ -8,8 +8,9 @@ include("db.php");
 	<head><link rel="stylesheet" type="text/css" href="css/css.css">
 	<head><link rel="stylesheet" type="text/css" href="css/export.css">
     <title>Вход в административную панель</title>
-	
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>	
     <script type="text/javascript" src="http://bitby.net/wp-demo/files/jquery.js"></script>
+
 <script type="text/javascript" src="jscripts/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript">
  tinyMCE.init({
