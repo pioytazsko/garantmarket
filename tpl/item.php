@@ -17,7 +17,14 @@ if($mankursrez>0)
 {
 $curs=$curs-$mankursrez['kursman'];
 }
-    $itemrez['price']=$itemrez['price']-$itemrez['price']/100*$datas[0]['discount'];
+// проверка на локальную цену   
+$loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$itemrez['id']);
+$loc=mysql_fetch_row($loc);
+
+if($loc[0]==1){
+$itemrez['price']=$itemrez['price']-$itemrez['price']/100*$datas[0]['discount'];
+}
+// вывод цены
 $price= str_replace(',',' ',number_format($itemrez['price']));
 $price2= $itemrez['price']*$curs;
 $price2= str_replace(',',' ',number_format($price2));
@@ -280,14 +287,31 @@ echo "</ul>";
 					
 
 				<?php 
+                    $loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$itemrez4['id']);
+$loc=mysql_fetch_row($loc);
+$datas = $database->select("location_discount", '*', array('city'=>$city['city']['name_en']) );
+if (count($datas)==0){
+$datas = $database->select("location_discount", '*', array('city'=>'Other') );
+}
+if($loc[0]==1){
+$itemrez4['price']=$itemrez4['price']-$itemrez4['price']/100*$datas[0]['discount'];
+};
+                    
 			     if($itemrez4[price]==0) 
 				{?>
-							<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php  echo "$itemrez4[price] $val1"; ?></span></span><div class="b1c-sm"><button class="b1c" value="<?php echo $itemrez4['id'];?>">ПОД ЗАКАЗ</button></div></div>
+							<div class="shop_cena"><span class="b1c-name">  <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"></span></span><div class="b1c-sm"><button class="b1c" value="<?php echo $itemrez4['id'];?>">ПОД ЗАКАЗ</button></div></div>
 				
 <?php } 
 			     else
 				{?>
-	<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php $cena=number_format($itemrez4['price'],0,'',' '); echo $cena.' '.$val1; ?></span></span><div><button class="b1c" value="<?php echo $itemrez4['id'];?>">КУПИТЬ</button></div></div>
+	<div class="shop_cena"><span class="b1c-name"> Цена: <span style="font-size:19px;font-weight:bold;  margin-left: 10px;"><?php
+
+                 
+                 
+                 
+                 
+                 $cena=number_format($itemrez4['price'],0,'',' '); echo $cena.' '.$val1; ?></span></span><div><button class="b1c" value="<?php echo $itemrez4['id'];?>">КУПИТЬ</button></div></div>
+                    
 <?php } ?>
 				</div>
 

@@ -22,7 +22,8 @@ $arr[]=$database->select("catalog",
                                'catalog.chpu',
                                'catalog.price',
                                'catecory.chpu(cat_chpu)',
-                              'catalog.image'), 
+                              'catalog.image',
+                              'catalog.local_price'), 
                          array(
 	"catalog.id" => $val->id
 ));
@@ -39,8 +40,12 @@ if (count($datas)==0){
 $datas_disc = $database->select("location_discount", '*', array('city'=>'Other') );
 }
 //учтем скидку вы цене товара 
+
+
 foreach($arr as &$val){
-$val[0]['price']=$val[0]['price']-$datas_disc[0]['discount']*$val[0]['price']/100;
+    if($val[0]['local_price']==1){
+    
+$val[0]['price']=$val[0]['price']-$datas_disc[0]['discount']*$val[0]['price']/100;}
 }
 //print_r($datas_disc);
 //print_r($arr);

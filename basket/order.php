@@ -28,6 +28,7 @@ $arr[]=$database->select("catalog",
                                 'catalog.name',
                                'catalog.chpu',
                                'catalog.price',
+                               'catalog.local_price',
                                'catecory.chpu(cat_chpu)'
                               ), 
                          array(
@@ -53,8 +54,14 @@ $message="<p>
 $description='';
 //print_r($arr);
 foreach($arr as &$val){
- $val[0]['price']=$val[0]['price']-$val[0]['price']/100*$data[0]['discount'];   
-$description=$description.'<span>Товар:<b>'.$val[0]['name'].'</b> По цене: <b>'.number_format($val[0]['price'],0,'.',' ').'руб.</b><a href="http://garantmarket.by/catalog/'.$val[0]['cat_chpu'].'/'.$val[0]['chpu'].'" > Просмотреть товар</a></span><br>';
+     if($val[0]['local_price']==1){ 
+$val[0]['price']=$val[0]['price']-$val[0]['price']/100*$data[0]['discount'];   
+     }
+
+ 
+
+    
+    $description=$description.'<span>Товар:<b>'.$val[0]['name'].'</b> По цене: <b>'.number_format($val[0]['price'],0,'.',' ').'руб.</b><a href="http://garantmarket.by/catalog/'.$val[0]['cat_chpu'].'/'.$val[0]['chpu'].'" > Просмотреть товар</a></span><br>';
 };
 $message=$message.$description;
 //echo " Спасибо!!! Ваш заказ принят!";

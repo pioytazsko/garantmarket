@@ -227,7 +227,14 @@ $newname=$vipitemrez['image'];
     $end=explode('/', $newname);
 $image = end($end);
 $name=$vipitemrez['name'];
-        $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];
+    
+      $loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$vipitemrez['id']);
+    $loc=mysql_fetch_row($loc);
+//    print_r($loc);
+    if($loc[0]==1){
+    
+    $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];}
+    
 $price= str_replace(',',' ',number_format($vipitemrez['price']));
 $price2= $vipitemrez['price']*$curs;
 $price2= str_replace(',',' ',number_format($price2));

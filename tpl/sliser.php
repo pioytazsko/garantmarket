@@ -12,6 +12,17 @@ $database = new medoo(array(
             'password' => $config_db['password'],
             'charset'=>$config_db['charset']
         ));
+//проверим на локальные цены 
+$loc=$database->select('catalog',array('local_price'),array('id'=>$datas[0]['id']));
+//определяем местоположение 
+require_once(__ROOT__.'/location/SxGeo.php');
+$SxGeo = new SxGeo(__ROOT__.'/location/SxGeo.dat');
+$ip=$_SERVER['REMOTE_ADDR'];
+$city=$SxGeo->get($ip);
+$procent = $database->select("location_discount", '*', array('city'=>$city['city']['name_en']) );
+if (count($procent)==0){
+$procent = $database->select("location_discount", '*', array('city'=>'Other') );
+}
 // сделаем  выборку слайдов из базы данных для нашего товара из бд для категории, и для товара
 $datas = $database->select("catalog", array(
 	"category"
@@ -42,16 +53,26 @@ if (count($whith_items[0])>2)
         foreach ($whith_items[0] as $value)
         {
         //читаем для всех товаров список избранных параметров
-                $var[]=$database->select("catalog",array("name","chpu","image","id","category","price"),array("id"=>$value));
+                $var[]=$database->select("catalog",array("name","chpu","image","id","category","price","local_price"),array("id"=>$value));
         }
 ;};
+
+// изменимцены, если локально для этих товаров стоят скидки
+
 if (count($whith_category[0])>2)
 {
         foreach ($whith_category[0] as $value){
         //читаем для всех товаров список избранных параметров
-                $var[]=$database->select("catalog",array("name","chpu","image","id","category","price"),array("id"=>$value));
+                $var[]=$database->select("catalog",array("name","chpu","image","id","category","price","local_price"),array("id"=>$value));
                 } 
 ;};
+foreach($var as &$p){
+if($p[0]['local_price']==1){
+    $p[0]['price']=$p[0]['price']-$p[0]['price']/100*$procent[0]['discount'];
+    
+    };
+
+} 
 //имея массив с выводными значениями мы начинаем строить слайдер
 // если  нет товаров в   товарах и категорях то ничего не выводим .. иначе выводим слайдер
 if((count($var[0])) or (count($var[1]))  )

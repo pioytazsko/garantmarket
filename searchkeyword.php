@@ -176,11 +176,7 @@ if ($sqlQuery != '') {
     $search1=preg_split('/###/',$search_category); 
             if (count($search1)>1){$search_category=$search1[1];};
             $search_category=ltrim($search_category);
-        
- 
-    
-    
-    
+  
     
     $sql_category="SELECT chpu,name FROM catecory WHERE name LIKE '%".$search_category."%' ORDER BY levl DESC LIMIT 0,5";
     if(!$res=mysql_query($sql_category)){echo "ERROR ".mysql_errno()." ".mysql_error()."\n";};
@@ -207,9 +203,13 @@ if ($sqlQuery != '') {
             $result=mysql_fetch_array($result);
 //         print_r($result);
             // сделаем коректировку цены
-            
-            $sqlItem['price']=$sqlItem['price']-$sqlItem['price']*$datas[0]['discount']/100;
-//            print_r($datas);
+            //локали для цен читаем 
+            $loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$sqlItem['id']);
+            $loc=mysql_fetch_row($loc);
+//    print_r($loc);
+            if($loc[0]==1){
+                $sqlItem['price']=$sqlItem['price']-$sqlItem['price']*$datas[0]['discount']/100;
+            }
             $price=number_format($sqlItem['price'],0,',',' ');
                          echo '<div id="block" style=""><div style="vertical-align:middle;float:left;clear:left;margin-top:10px;margin-left:10px">
                                     <a href="/catalog/'.$result['chpu'].'/'.$sqlItem['chpu'].'">

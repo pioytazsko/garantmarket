@@ -42,8 +42,15 @@ $curs=$curs-$mankursrez['kursman'];
 
 $newname=$vipitemrez['image'];
     $view=$vipitemrez['publick'];
-    $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];
-$temp=explode('/', $newname);    
+//локали для цен читаем 
+    $loc=mysql_query('SELECT local_price FROM catalog WHERE id='.$vipitemrez['id']);
+    $loc=mysql_fetch_row($loc);
+//    print_r($loc);
+    if($loc[0]==1){
+    
+    $vipitemrez['price']=$vipitemrez['price']-$vipitemrez['price']/100*$datas[0]['discount'];}
+
+    $temp=explode('/', $newname);    
 $image = end($temp);
 $name=$vipitemrez['name'];
 $price= str_replace(',',' ',number_format($vipitemrez['price']));
