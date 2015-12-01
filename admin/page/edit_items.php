@@ -211,7 +211,7 @@ echo "<div class='nocoment'>Вы ввели ID который уже испол�
 			<div class="text1">Рекомендуемый размер 90px на 90px</div>
 			<div class="name1"><input name="image" type="file" /></div>
 		</div>
-		<div class="add_image"><img src="../shopimage/<?php $image = end(explode('/', $myrow['image'])); echo "$image"; ?>"></div>
+		<div class="add_image"><img src="../shopimage/<?php  $x=explode('/', $myrow['image']);$image = end($x); echo "$image"; ?>"></div>
 		
 <div class="update4"><input name="id" type="hidden" value="<?php echo "$myrow[id]"; ?>"><input name="submit" type="submit" value="Обновить позицию"></div>
 		

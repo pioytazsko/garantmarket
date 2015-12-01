@@ -95,7 +95,7 @@ switch (count($s->complect->items_whith_discount))
  default:break;
 };
 $headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=windows-1251' . "\r\n";  
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";  
 $subject="Заказ комплекта товаров";
 $message="<br>В комплекте:</br>".
         $s->complect->name_main_item.'<br><b>'.

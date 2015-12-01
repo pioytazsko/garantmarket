@@ -1,11 +1,6 @@
 <?php include("../db.php");
+include('image_compress.php');
 //обробатываем изображение
-$loc=$_POST['location'];
-//echo $loc;
-if ($loc=='on'){$loc=1;}else{$loc=0;};
-
-
-
 function resize($photo_src, $width, $name){
 $parametr = getimagesize($photo_src);
 list($width_orig, $height_orig) = getimagesize($photo_src);
@@ -13,6 +8,8 @@ $ratio_orig = $width_orig/$height_orig;
 $new_width = $width;
 $new_height = $width / $ratio_orig;
 $newpic = imagecreatetruecolor($new_width, $new_height);
+$col2=imagecolorallocate($newpic,255,255,255);
+imagefilledrectangle($newpic,0,0,$new_width,$new_width,$col2);
 switch ( $parametr[2] ) {
  case 1: $image = imagecreatefromgif($photo_src);
  break;
@@ -39,7 +36,8 @@ if (isset($_POST['submit'])) {
             $newwidth = 700; //в данную переменную мы помещаем желаемую ширину файла
             $newname = $imgDir .rand(10000000000, 99999999999).($data['name']); 
 			function getExtension($newname) {
-   			return end(explode("/", $newname));
+                $val=explode("/", $newname);
+   			return end($val);
 			}
 			$image=getExtension($newname);
 					
@@ -82,7 +80,8 @@ $image="no_image.png";
 //Обробатываем файл
 $imgDir = $_SERVER['DOCUMENT_ROOT'].'/file/'; // каталог для хранения изображений
             function getExtension1($newname3) {
-   			return end(explode("/", $newname3));
+               $val=explode("/", $newname3);
+   			return end($val);
 			}
 			
 			if ($_FILES['file']['size']>0)
@@ -115,8 +114,8 @@ $unit=trim($_POST['unit']);
 
 if(1==1)
 {
-
-$rez=mysql_query ("INSERT INTO catalog (iditem, name, price, linkodzor, linkodzortitle, linkotziv, linkotzivtitle, manufekted, category, deskripshn, keywords, spase, vip, levl, filetitle, unit, image,  	filename, local_price) VALUES  ('$iditem', '$name', '$price', '$linkodzor', '$linkodzortitle', '$linkotziv', '$linkotzivtitle', '$manufekted', '$category', '$deskripshn', '$keywords', '$spase', '$vip', '$levl', '$filetitle', '$unit', '$image', '$file','$loc') ");
+$com=new Compressor($image);
+$rez=mysql_query ("INSERT INTO catalog (iditem, name, price, linkodzor, linkodzortitle, linkotziv, linkotzivtitle, manufekted, category, deskripshn, keywords, spase, vip, levl, filetitle, unit, image,  	filename) VALUES  ('$iditem', '$name', '$price', '$linkodzor', '$linkodzortitle', '$linkotziv', '$linkotzivtitle', '$manufekted', '$category', '$deskripshn', '$keywords', '$spase', '$vip', '$levl', '$filetitle', '$unit', '$image', '$file') ");
 if($rez=='true')
 {
 $url="../catalog.php?idp=5&idcom=1";

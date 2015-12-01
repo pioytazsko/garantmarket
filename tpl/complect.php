@@ -15,7 +15,7 @@ $database = new medoo(array(
 $url=$_SERVER['REQUEST_URI'];
 $url=basename($url);
 
-$datas=$database->select("catalog",array("id","image","name","price"),array("chpu"=>$url));
+$datas=$database->select("catalog",array("id","image","name","price","local_price"),array("chpu"=>$url));
 $complect=$database->select("complect",
                             array("item_1",
                                   "proc_low_1",
@@ -28,7 +28,7 @@ $datas_complect=$database->select("catalog",array("id","image","name","price","c
                                   array("id"=>array($complect[0]['item_1'],
                                                     $complect[0]['item_2'],
                                                     $complect[0]['item_3']))); 
-$loc=$database->select('catalog',array('local_price'),array('id'=>$datas[0]['id']));
+//$loc=$database->select('catalog',array('local_price'),array('id'=>$datas[0]['id']));
 //определяем местоположение 
 require_once(__ROOT__.'/location/SxGeo.php');
 $SxGeo = new SxGeo(__ROOT__.'/location/SxGeo.dat');
@@ -41,7 +41,7 @@ $procent = $database->select("location_discount", '*', array('city'=>'Other') );
     
     
 if(count($datas_complect)!=0){
-    if($loc[0]['local_price']==1){
+    if($datas[0]['local_price']==1){
     $datas[0]['price']=$datas[0]['price']-$datas[0]['price']/100*$procent[0]['discount'];
     
     };

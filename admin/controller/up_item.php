@@ -1,4 +1,5 @@
 <?php include("../db.php");
+include('image_compress.php');
 //обробатываем изображение
 $id=$_POST['id'];
 
@@ -6,6 +7,7 @@ $item=mysql_query("SELECT * FROM catalog WHERE id=$id", $db);
 $items=mysql_fetch_array($item);
 $value=explode('/', $items['image']);
 $newim=end($value);
+
 $newfile=$items['filename'];
 $image=$newim;
 if($_FILES['image']['size']!='')
@@ -22,6 +24,8 @@ $ratio_orig = $width_orig/$height_orig;
 $new_width = $width;
 $new_height = $width / $ratio_orig;
 $newpic = imagecreatetruecolor($new_width, $new_height);
+$col2=imagecolorallocate($newpic,255,255,255);
+imagefilledrectangle($newpic,0,0,$new_width,$new_width,$col2);
 switch ( $parametr[2] ) {
  case 1: $image = imagecreatefromgif($photo_src);
  break;
@@ -48,7 +52,9 @@ if (isset($_POST['submit'])) {
             $newwidth = 700; //в данную переменную мы помещаем желаемую ширину файла
             $newname = $imgDir .rand(10000000, 99999999).($data['name']); 
 			function getExtension1($newname) {
-   			return end(explode("/", $newname));
+                $value=explode("/", $newname);
+                
+   			return end($value);
 			}
 			$image=getExtension1($newname);
 			
@@ -100,7 +106,8 @@ unlink('../file/'.$newim);
 }
 $imgDir = $_SERVER['DOCUMENT_ROOT'].'/file/'; // каталог для хранения изображений
             function getExtension1($newname2) {
-   			return end(explode("/", $newname2));
+                $value=explode("/", $newname2);
+   			return end($value);
 			}
 			
 			if ($_FILES['file']['size']>0)
@@ -189,20 +196,16 @@ while($dopparrez=mysql_fetch_array($doppar));
 
 //Конц обработки дополнительных параметров
 
-$loc=$_POST['location'];
-//echo $loc;
-if ($loc=='on'){$loc=1;}else{$loc=0;};
+
 if($iditem!='')
 {
-$result=mysql_query("SELECT * FROM catalog WHERE iditem='".$iditem."' AND id!='".$id."'");
-//    print_r($result);
+$result=mysql_query("SELECT * FROM catalog WHERE iditem=$iditem AND id!=$id");
 $myrow=mysql_fetch_array($result);
-    
 if($myrow<1)
-{
+{$com=new Compressor($image);
 $ednews=mysql_query("UPDATE catalog SET name='$name', price='$price', linkodzor='$linkodzor', linkodzortitle='$linkodzortitle', linkotziv='$linkotziv', 
 linkotzivtitle='$linkotzivtitle', manufekted='$manufekted', category='$category',deskripshn ='$deskripshn', keywords='$keywords', image='$image', spase='$spase', 
-vip='$vip', levl='$levl', filetitle='$filetitle', unit='$unit', iditem='$iditem', filename='$newfile', chpu='$chpu', h1='$h1', title='$title', description='$description',share=$share ,local_price='$loc'
+vip='$vip', levl='$levl', filetitle='$filetitle', unit='$unit', iditem='$iditem', filename='$newfile', chpu='$chpu', h1='$h1', title='$title', description='$description',share=$share 
 WHERE id=$id ", $db);
 header("Location: ".$_SERVER['HTTP_REFERER']."&idcom=1");
 }

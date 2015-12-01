@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
     //добавим сразу если имеются вывбранные товары 
-    var arr = $('input:checkbox:checked').toArray();
+    var arr = $('input:checkbox:checked[name=product]').toArray();
     console.log(arr);
     for (var p in arr) {
         checked.add_arr(Number(arr[p].value));
@@ -24,7 +24,7 @@ $(document).ready(function () {
     //  //обработка нажатия на  чекбокс
     //    var x = 0;
     //    var temp = [];
-    $('input:checkbox').click(function () {
+    $('input:checkbox[name=product]').click(function () {
             checked.add_arr($(this).attr('value'));
             checked.add_name();
             console.log(checked);
@@ -158,12 +158,40 @@ $(document).ready(function () {
 
 
     $('[value=0].select').click(function () {
-         $('input:checkbox:checked').trigger('click');
+         $('input:checkbox:checked[name=product]').trigger('click');
+//чтение и обнуление чекбоксов
+          $.ajax({
+            type: "POST",
+            url: "/admin/controller/read_slider.php",
+            data: {
+                id: id,
+                complect:0
+
+            },
+            success: function (msg) {
+
+                msg = JSON.parse(msg);
+                for (var p in msg[0]) {
+                    //   
+                    if ((p != 'i') && (p != 'id') && (msg[0][p] != 0)) {
+                        // console.log(msg[0][p]);
+
+                        $('[type=checkbox][value=' + msg[0][p] + ']').trigger('click');
+                    }
+
+                }
+
+            }
+        });
+        
+        
+        
+        
    
     });
       
     $('[value=1].select').click(function () {
-        $('input:checkbox:checked').trigger('click');
+        $('input:checkbox:checked[name=product]').trigger('click');
         $.ajax({
             type: "POST",
             url: "/admin/controller/read_slider.php",
@@ -186,13 +214,6 @@ console.log(msg);
 
             }
         });
-    });
-
-
-
-
-    $('[value=1].select').click(function () {
-        console.log('')
     });
 
     function read_date() {
