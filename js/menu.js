@@ -331,6 +331,7 @@ $(document).ready(function() {
 
     $('.main_li .basket').click(function() {
         //делаем запрос к бд 
+        
         var coockie = getCookie('json');
 //        console.log(coockie);
         $.post("/basket/read_basket.php", {
@@ -385,14 +386,15 @@ $(document).ready(function() {
                 
                 //отправка заказа 
 //                формируем ответ для заказа
-           if(JSON.parse(getCookie('json')).length!=0){
+           if(JSON.parse(getCookie('json')).length!=0){  $('.form_buy_basket').css({"z-index":350})
                 var basket = new Basket($('#name').attr('value'),$('#adress').attr('value'),$('#phone_basket').attr('value'),$('#note').attr('value'),getCookie('json'));
 //                console.log(basket);
                 $.post('/basket/order.php', {
                     json: JSON.stringify(basket)
                 }, function(data) {
 //console.log(data);
-alert('Статус заказа:'+data);
+                    
+alert('Статус заказа:'+data); $('.form_buy_basket').css({"z-index":150})
       $('.delete_item_basket').trigger('click');
          $('.form_buy_basket').trigger('click');            
 

@@ -76,7 +76,7 @@ for($i=$page3;$i<$page;$i++) {
   if ($i == $page) {
     echo "<div class='push'>$i</div>";
   } else {
-    echo '<div class="push"><a href="'.$_SERVER['PHP_SELF'].'?idp=3&page='.$i.'">'.$i."</a></div> ";
+    echo '<div class="push"><a href="'.$_SERVER['PHP_SELF'].'?idp=17&page='.$i.'">'.$i."</a></div> ";
   }
 }
 
@@ -84,13 +84,13 @@ for($i=$page;$i<=$page2;$i++) {
   if ($i == $page) {
     echo "<div class='push'>$i</div>";
   } else {
-    echo '<div class="push"><a href="'.$_SERVER['PHP_SELF'].'?idp=3&page='.$i.'">'.$i."</a></div> ";
+    echo '<div class="push"><a href="'.$_SERVER['PHP_SELF'].'?idp=17&page='.$i.'">'.$i."</a></div> ";
   }
 }
 }
 else
 {
-echo "Нет производителей";
+echo "Пусто!";
 }
 ?>
 			
